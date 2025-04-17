@@ -8,22 +8,29 @@ let mealValue = document.getElementById("search-food");
 let mealValue_text;
 let search = document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
 
-mealValue.addEventListener('keypress', (e) => {
+mealValue.addEventListener('keydown', (e) => {
      if(e.key == 'Enter'){
+          console.log(e.key)
           searchResultUpdate()
      }
 })
 
-function searchResultUpdate(){
-     () => {
+mealValue.addEventListener('keydown', () => {
 
+     setTimeout(
+          () => {
+               searchResultUpdate()
+          },3000
+     )
+});
+
+function searchResultUpdate(){
           if(!mealValue.value) return
           mealValue_text =  mealValue.value
           let api = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealValue_text}`
           showAllMeals.innerHTML = ""
           food(api);
           mealValue.value = "";
-     }
 }
 
 let d;
