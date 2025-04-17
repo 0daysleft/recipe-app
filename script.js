@@ -49,7 +49,7 @@ function dispayFood() {
           }
           }
           catch(err){
-                    showAllMeals.innerHTML = 'No Meal Found Here, Please Search a valid Meal';
+                    showAllMeals.innerHTML = 'No Meal Found Here, Please Search a valid Meal <button onclick =" window.location.reload()" >Home</button> ';
                }
           
 }
