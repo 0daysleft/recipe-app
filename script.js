@@ -47,6 +47,7 @@ async function food(api) {
           d = await r.json();
 
           dispayFood()
+          console.log(d)
      }
      catch(err){
           console.log(err)
