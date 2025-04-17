@@ -44,6 +44,8 @@ button{
   overflow: hidden; /* Prevent outer scroll unless needed */
   padding: 1rem;
   box-sizing: border-box;
+  background-color: aquamarine;
+  border-radius: 2rem;
 }
 
 .meal-name {
@@ -68,7 +70,9 @@ button{
   border: 2px solid blue;
   padding: 0.5rem;
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 2;
+  background-color: blueviolet;
+  border-radius: 1rem;
 }
 
 
