@@ -37,6 +37,7 @@ nav{
           background: linear-gradient(90deg, #00ffe0, #ff00c8, #00ffe0);
           background-size: 200% auto;
           -webkit-background-clip: text;
+          background-clip: text;
           -webkit-text-fill-color: transparent;
           animation: scroll-left 12s linear infinite, shine 3s ease-in-out infinite alternate;
           animation-play-state: running;
