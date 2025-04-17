@@ -41,6 +41,7 @@ let meals;
 food(api);
 
 async function food(api) {
+     showAllMeals.innerHTML = ""
      try{
           let r = await fetch(api)
           d = await r.json();
@@ -73,7 +74,10 @@ function dispayFood() {
                ">
 
                     
-               The Meal <span style="text-transform: uppercase; font-weight: bolder; font-size: 2rem; color: red" >${mealValue_text}</span> isn't Found Here, Please Search a valid Meal
+               We could't find <span style="text-transform: uppercase; font-weight: bolder; font-size: 2rem; color: red" >${mealValue_text}</span> 
+               Please Search for another type of Meal </br> CHECK THESE OUT </br> <a href="#"> <p onclick='food("https://www.themealdb.com/api/json/v1/1/search.php?s=rice")'> CHECK RICE </p> </a> </br>
+               <a href="#"> <p onclick='food("https://www.themealdb.com/api/json/v1/1/search.php?s=pancakes")'> CHECK PANCAKES </p> </a> </br>
+               <a href="#"> <p onclick='food("https://www.themealdb.com/api/json/v1/1/search.php?s=pizza")'> CHECK PIZZA </p> </a>
                <button onclick =" window.location.reload()" >Home</button>
                </div>
                `
