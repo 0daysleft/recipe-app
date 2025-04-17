@@ -3,3 +3,12 @@
      padding: 0;
      box-sizing: border-box;
 }
+
+input, button{
+     padding: 1rem;
+     margin: 3rem;
+}
+
+button{
+     cursor: pointer;
+}
