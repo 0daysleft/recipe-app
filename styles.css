@@ -34,7 +34,7 @@ button{
 
 .show-meal{
      width: 400px;
-     height: 500px;
+     height: 600px;
      margin: 1rem;
      border: 2px solid red;
      display: flex;
@@ -42,7 +42,7 @@ button{
      align-items: center;
      flex-direction: column;
      gap: 1rem;
-     overflow: hidden;
+     overflow: auto;
 
 }
 
@@ -57,14 +57,13 @@ button{
   height: auto;            
   display: block; 
   object-fit: contain;
-  margin: .5rem;  
+
 }
 
 .meal-instructions{
      max-width: 100%;
      height: max-content;
-     padding: .5rem;
-     margin: .5rem;
+    
      overflow: auto !important;
      border: 2px solid blue;
 }
