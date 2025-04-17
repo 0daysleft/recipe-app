@@ -66,7 +66,18 @@ function dispayFood() {
           }
           }
           catch(err){
-                    showAllMeals.innerHTML = 'No Meal Found Here, Please Search a valid Meal <button onclick =" window.location.reload()" >Home</button> ';
+               showAllMeals.innerHTML = `
+               <div style="width: 100vw; height: 60vh; display: flex;
+                         align-items: center; flex-direction: column;
+                         text-align: center; justify-content: center;
+               ">
+
+                    
+               The Meal <span style="text-transform: uppercase; font-weight: bolder; font-size: 2rem; color: red" >${mealValue_text}</span> isn't Found Here, Please Search a valid Meal
+               <button onclick =" window.location.reload()" >Home</button>
+               </div>
+               `
+
                }
           
 }
