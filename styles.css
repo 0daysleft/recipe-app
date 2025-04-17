@@ -5,11 +5,18 @@
 }
 
 body{
-     display: flex;
-     flex-direction: column;
+     background-color: antiquewhite;
 }
 
-
+nav{
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     background-color: dimgrey;
+     position: sticky;
+     top: 0;
+     margin-bottom: 3rem;
+}
 
 input, button{
      padding: 1rem;
@@ -27,14 +34,37 @@ button{
 
 .show-meal{
      width: 400px;
-     height: 400px;
+     height: 500px;
      margin: 1rem;
      border: 2px solid red;
      display: flex;
      flex-wrap: wrap;
+     align-items: center;
+     flex-direction: column;
+     gap: 1rem;
+     overflow: hidden;
+
 }
 
-.show-meal img{
-     width: 200px;
-     height: 200px;
+.meal-name,
+.meal-instructions {
+  width: 100%;            
+  text-align: center;      
+}
+
+.meal-img {
+  max-width: 100%;         
+  height: auto;            
+  display: block; 
+  object-fit: contain;
+  margin: .5rem;  
+}
+
+.meal-instructions{
+     max-width: 100%;
+     height: max-content;
+     padding: .5rem;
+     margin: .5rem;
+     overflow: auto !important;
+     border: 2px solid blue;
 }
