@@ -1,7 +1,7 @@
 
 
 let api = `https://www.themealdb.com/api/json/v1/1/search.php?s=`
-let showAllMeals = document.getElementsByClassName("show-meal")[0];
+let showAllMeals = document.getElementsByClassName("all-meals")[0];
 // let meal_photo = document.querySelector("img");
 // let meal_intr = document.getElementsByClassName("meal-instructions")[0];
 let mealValue = document.getElementById("search-food");
@@ -42,9 +42,11 @@ function dispayFood() {
           try{
           for(let i = 0; i <= d.meals.length - 1; i++){
                 showAllMeals.innerHTML += `
+                         <div class="show-meal">
                          <p class="meal-name">${d.meals[i].strMeal}</p>
                          <img src="${d.meals[i].strMealThumb}" class="meal-img">
                          <div class="meal-instructions">${d.meals[i].strInstructions}</div>
+                         <div>
                `
           }
           }
