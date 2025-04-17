@@ -94,7 +94,17 @@ button{
   border-radius: 8px;
 }
 
+.marquee, footer{
+     width: 100%;
+     padding: 1rem;
+     text-align: center;
+}
 
+footer{
+     position: static;
+     bottom: 0;
+     left: 0;
+}
 
 /*
 .show-meal{
