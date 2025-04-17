@@ -26,14 +26,20 @@ let meals;
 food(api);
 
 async function food(api) {
+     try{
           let r = await fetch(api)
           d = await r.json();
 
           dispayFood()
+     }
+     catch(err){
+          console.log(err)
+     }
 }
 
 function dispayFood() {
 
+          try{
           for(let i = 0; i <= d.meals.length - 1; i++){
                 showAllMeals.innerHTML += `
                          <p class="meal-name">${d.meals[i].strMeal}</p>
@@ -41,6 +47,11 @@ function dispayFood() {
                          <div class="meal-instructions">${d.meals[i].strInstructions}</div>
                `
           }
+          }
+          catch(err){
+                    showAllMeals.innerHTML = 'No Meal Found Here, Please Search a valid Meal';
+               }
+          
 }
 
 
