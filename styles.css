@@ -5,7 +5,9 @@
 }
 
 body{
-     background-color: antiquewhite;
+     background: linear-gradient(to right, #fff8f0, #f9f9f9);
+     font-family: 'Segoe UI', sans-serif;
+     color: #2e2e2e;
 }
 
 nav{
@@ -16,6 +18,7 @@ nav{
      position: sticky;
      top: 0;
      margin-bottom: 3rem;
+     z-index: 1;
 }
 
 input, button{
@@ -46,34 +49,50 @@ button{
   box-sizing: border-box;
   background-color: aquamarine;
   border-radius: 2rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #f1e0c8;
+  transition: transform 0.3s;
+}
+
+.show-meal:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .meal-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #3d3d3d;
+  border-bottom: 1px dashed #d9d9d9;
+  padding-bottom: 0.5rem;
   width: 100%;
   text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
 }
 
 .meal-img {
   width: 100%;
-  max-height: 250px; /* Control height */
+  max-height: 240px; /* Control height */
   object-fit: cover;
   display: block;
   border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .meal-instructions {
   width: 100%;
   flex-grow: 1;           /* Take remaining space */
   overflow-y: auto;       /* Scroll if too long */
-  border: 2px solid blue;
-  padding: 0.5rem;
   font-size: 0.95rem;
   line-height: 2;
-  background-color: blueviolet;
-  border-radius: 1rem;
+  background: #fff3db;
+  border-left: 5px solid #e2b76d;
+  padding: 1rem;
+  border-radius: 8px;
 }
+
 
 
 /*
