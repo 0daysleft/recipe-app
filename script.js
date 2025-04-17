@@ -1,6 +1,6 @@
 
 
-let api = `https://www.themealdb.com/api/json/v1/1/search.php?s=`
+let api = `https://www.themealdb.com/api/json/v1/1/random.php`
 let showAllMeals = document.getElementsByClassName("all-meals")[0];
 // let meal_photo = document.querySelector("img");
 // let meal_intr = document.getElementsByClassName("meal-instructions")[0];
