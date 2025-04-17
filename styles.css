@@ -21,6 +21,49 @@ nav{
      z-index: 1;
 }
 
+.marquee-container {
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          box-sizing: border-box;
+          padding: 10px 0;
+     }
+
+     .marquee-content {
+          display: inline-block;
+          font-size: 22px;
+          font-weight: bold;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(90deg, #00ffe0, #ff00c8, #00ffe0);
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: scroll-left 12s linear infinite, shine 3s ease-in-out infinite alternate;
+          animation-play-state: running;
+     }
+
+     .marquee-container:hover .marquee-content {
+          animation-play-state: paused;
+     }
+
+     @keyframes scroll-left {
+          0% {
+               transform: translateX(100%);
+          }
+          100% {
+               transform: translateX(-100%);
+          }
+     }
+
+     @keyframes shine {
+          0% {
+               background-position: 0% center;
+          }
+          100% {
+               background-position: 100% center;
+          }
+     }
+
 input, button{
      padding: 1rem;
      margin: 3rem;
