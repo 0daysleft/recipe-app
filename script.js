@@ -6,7 +6,15 @@ let showAllMeals = document.getElementsByClassName("all-meals")[0];
 // let meal_intr = document.getElementsByClassName("meal-instructions")[0];
 let mealValue = document.getElementById("search-food");
 let mealValue_text;
-let search = document.getElementById("searchBtn").addEventListener('click', 
+let search = document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
+
+mealValue.addEventListener('keypress', (e) => {
+     if(e.key == 'Enter'){
+          searchResultUpdate()
+     }
+})
+
+function searchResultUpdate(){
      () => {
 
           if(!mealValue.value) return
@@ -16,7 +24,7 @@ let search = document.getElementById("searchBtn").addEventListener('click',
           food(api);
           mealValue.value = "";
      }
-)
+}
 
 let d;
 
