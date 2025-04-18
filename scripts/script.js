@@ -72,7 +72,7 @@ function dispayFood() {
                 showAllMeals.innerHTML += `
                          <div class="show-meal">
                          <p class="meal-name">${shuffledMeals[i].strMeal}</p>
-                         <img src="${shuffledMeals[i].strMealThumb}" class="meal-img">
+                         <img src="${shuffledMeals[i].strMealThumb}" class="meal-img" id='${shuffledMeals[i].idMeal}'>
                          <!--
                          <div class="meal-instructions">${shuffledMeals[i].strInstructions}</div>
                          <div> -->
@@ -96,12 +96,12 @@ function dispayFood() {
                }
                
                document.querySelectorAll('.meal-img').forEach(
-     (ele)=> {
-          ele.addEventListener('click', () => {
-               console.log(ele)
-          })
-     }
-)
+                    (ele)=> {
+                         ele.addEventListener('click', () => {
+                              sessionStorage.setItem('mealId', ele.id)     
+                         })
+                    }
+               )
                
           
 }
