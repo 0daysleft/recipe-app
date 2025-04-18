@@ -33,8 +33,8 @@ function searchResultUpdate(){
 
 let shuffledMeals;
 let allMealsData;
-let shufflingmeals;
-let shuffle;
+let allMealsObject;
+let shuffleMealsFunction;
 
 food(api);
 
@@ -43,14 +43,14 @@ async function food(api) {
      try{
           let response = await fetch(api)
           allMealsData = await response.json();
-     
-          shufflingmeals = allMealsData.meals;
-          shuffle = (shufflingmeals) => {
-               for (let i = shufflingmeals.length - 1; i > 0; i--) {
+
+          allMealsObject = allMealsData.meals;
+          shuffleMealsFunction = (allMealsObject) => {
+               for (let i = allMealsObject.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
-                    [shufflingmeals[i], shufflingmeals[j]] = [shufflingmeals[j], shufflingmeals[i]];
+                    [allMealsObject[i], allMealsObject[j]] = [allMealsObject[j], allMealsObject[i]];
                }
-               return shufflingmeals;
+               return allMealsObject;
           }
           dispayFood()
      }
@@ -61,7 +61,7 @@ async function food(api) {
 
 function dispayFood() {
      
-     shuffledMeals = shuffle(shufflingmeals)
+     shuffledMeals = shuffleMealsFunction(allMealsObject)
           try{
           for(let i = 0; i <= shuffledMeals.length - 1; i++){
                 showAllMeals.innerHTML += `
