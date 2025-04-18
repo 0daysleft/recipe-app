@@ -33,7 +33,6 @@ function searchResultUpdate(){
 
 let shuffledMeals;
 let d;
-let meals;
 let shufflingmeals;
 let shuffle;
 
@@ -55,15 +54,12 @@ async function food(api) {
                }
                return shufflingmeals;
           }
-
-          
           dispayFood()
      }
      catch(err){
           console.log(err)
      }
 }
-
 
 function dispayFood() {
      
