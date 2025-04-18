@@ -60,16 +60,10 @@ async function food(api) {
           console.log(err)
      }
 }
-//window.onload = ()=> {
+
 // console.log(document.querySelectorAll('.show-meal'))
-// .forEach(
-//      (ele)=> {
-//           ele.addEventListener('click', () => {
-//                console.log(ele)
-//           })
-//      }
-// )
-//}
+
+
 function dispayFood() {
      
      shuffledMeals = shuffleMealsFunction(allMealsObject)
@@ -100,8 +94,15 @@ function dispayFood() {
                `
 
                }
-               console.log(document.querySelectorAll('.meal-img'))
-               console.log(shuffledMeals.idMeal)
+               
+               document.querySelectorAll('.meal-img').forEach(
+     (ele)=> {
+          ele.addEventListener('click', () => {
+               console.log(ele)
+          })
+     }
+)
+               
           
 }
 
