@@ -50,10 +50,6 @@ async function food(api) {
           
           //console.log(d)
           shufflingmeals = d.meals;
-          //console.log(shufflingmeals)
-          //console.log("Suff Elm 2: ", shuffledMeals[2])
-          //console.log("suff.m: " + shufflingmeals.length)
-          //console.log("d.meals: " + d.meals[2])
           shuffle = (shufflingmeals) => {
                for (let i = shufflingmeals.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
@@ -68,7 +64,6 @@ async function food(api) {
      catch(err){
           console.log(err)
      }
-    
 }
 
 //console.log(shuffle(d.meals)[3])
