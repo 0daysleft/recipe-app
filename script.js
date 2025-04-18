@@ -1,6 +1,7 @@
 
 
-let api = `https://www.themealdb.com/api/json/v1/1/random.php`
+let api = `https://www.themealdb.com/api/json/v1/1/search.php?s=`
+//API FOR ONE RANDOM MEAL = https://www.themealdb.com/api/json/v1/1/random.php
 let showAllMeals = document.getElementsByClassName("all-meals")[0];
 // let meal_photo = document.querySelector("img");
 // let meal_intr = document.getElementsByClassName("meal-instructions")[0];
@@ -10,7 +11,6 @@ let search = document.getElementById("searchBtn").addEventListener('click', sear
 
 mealValue.addEventListener('keydown', (e) => {
      if(e.key == 'Enter'){
-          console.log(e.key)
           searchResultUpdate()
      }
 })
@@ -33,10 +33,11 @@ function searchResultUpdate(){
           mealValue.value = "";
 }
 
-let d;
+let shuffledMeals;
 
 let meals;
 
+let shuffle;
 
 food(api);
 
@@ -47,22 +48,38 @@ async function food(api) {
           d = await r.json();
 
           dispayFood()
-          console.log(d)
+          //console.log(d)
+          let shufflingmeals = d.meals;
+
+          shuffle = (shufflingmeals) => {
+               for (let i = shufflingmeals.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shufflingmeals[i], shufflingmeals[j]] = [shufflingmeals[j], shufflingmeals[i]];
+               }
+               return shufflingmeals;
+          }
+
+          
+
      }
      catch(err){
           console.log(err)
      }
+     shuffledMeals = shuffle(d.meals)
 }
+
+console.log(shuffle(d.meals)[3])
+console.log(shuffledMeals)
 
 function dispayFood() {
 
           try{
-          for(let i = 0; i <= d.meals.length - 1; i++){
+          for(let i = 0; i <= shuffledMeals.length - 1; i++){
                 showAllMeals.innerHTML += `
                          <div class="show-meal">
-                         <p class="meal-name">${d.meals[i].strMeal}</p>
-                         <img src="${d.meals[i].strMealThumb}" class="meal-img">
-                         <div class="meal-instructions">${d.meals[i].strInstructions}</div>
+                         <p class="meal-name">${shuffledMeals[i].strMeal}</p>
+                         <img src="${shuffledMeals[i].strMealThumb}" class="meal-img">
+                         <div class="meal-instructions">${shuffledMeals[i].strInstructions}</div>
                          <div>
                `
           }
