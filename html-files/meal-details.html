@@ -27,7 +27,22 @@
           CopyRights @2025
      </footer>
 
-     <script src="script.js"></script>
+     <script>
+          let apiCat = 'https://www.themealdb.com/api/json/v1/1/categories.php'
+
+          async function meal(){
+               let res = await fetch(apiCat);
+               let data = await res.json()
+               console.log(data.categories[0])
+          }
+
+          meal()
+
+          console.log("Hello")
+
+     </script>
+
+     <!-- <script src="script.js"></script> -->
      
 </body>
 </html>
