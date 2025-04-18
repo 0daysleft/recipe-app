@@ -32,7 +32,7 @@ function searchResultUpdate(){
 }
 
 let shuffledMeals;
-let d;
+let allMealsData;
 let shufflingmeals;
 let shuffle;
 
@@ -42,9 +42,9 @@ async function food(api) {
      showAllMeals.innerHTML = ""
      try{
           let response = await fetch(api)
-          d = await response.json();
+          allMealsData = await response.json();
      
-          shufflingmeals = d.meals;
+          shufflingmeals = allMealsData.meals;
           shuffle = (shufflingmeals) => {
                for (let i = shufflingmeals.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
