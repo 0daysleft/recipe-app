@@ -80,7 +80,7 @@ function dispayFood() {
      //console.log("Suff Elm 2: ", shuffledMeals[2])
      //console.log("shuffled: ", shuffledMeals[1])
      shuffledMeals = shuffle(shufflingmeals)
-      console.log("len: ", shuffledMeals.length)
+     console.log("len: ", shuffledMeals.length)
           try{
           for(let i = 0; i <= shuffledMeals.length - 1; i++){
                 showAllMeals.innerHTML += `
