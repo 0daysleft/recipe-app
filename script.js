@@ -78,9 +78,7 @@ function dispayFood() {
                <div style="width: 100vw; height: 60vh; display: flex;
                          align-items: center; flex-direction: column;
                          text-align: center; justify-content: center;
-               ">
-
-                    
+               ">   
                We could't find <span style="text-transform: uppercase; font-weight: bolder; font-size: 2rem; color: red" >${mealValue_text}</span> 
                Please Search for another type of Meal </br> CHECK THESE OUT </br> <a href="#"> <p onclick='food("https://www.themealdb.com/api/json/v1/1/search.php?s=rice")'> CHECK RICE </p> </a> </br>
                <a href="#"> <p onclick='food("https://www.themealdb.com/api/json/v1/1/search.php?s=pancakes")'> CHECK PANCAKES </p> </a> </br>
