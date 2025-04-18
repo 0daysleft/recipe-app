@@ -134,6 +134,7 @@ button{
   max-height: 240px;
   object-fit: cover;
   display: block;
+  cursor: pointer;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
