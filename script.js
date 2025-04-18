@@ -48,7 +48,7 @@ async function food(api) {
           d = await response.json();
 
           
-          //console.log(d)
+     
           shufflingmeals = d.meals;
           shuffle = (shufflingmeals) => {
                for (let i = shufflingmeals.length - 1; i > 0; i--) {
@@ -66,13 +66,9 @@ async function food(api) {
      }
 }
 
-//console.log(shuffle(d.meals)[3])
-//console.log(shufflingmeals[2])
-//console.log(shuffledMeals[3])
 
 function dispayFood() {
-     //console.log("Suff Elm 2: ", shuffledMeals[2])
-     //console.log("shuffled: ", shuffledMeals[1])
+     
      shuffledMeals = shuffle(shufflingmeals)
           try{
           for(let i = 0; i <= shuffledMeals.length - 1; i++){
