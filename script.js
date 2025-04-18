@@ -70,8 +70,9 @@ function dispayFood() {
                          <div class="show-meal">
                          <p class="meal-name">${shuffledMeals[i].strMeal}</p>
                          <img src="${shuffledMeals[i].strMealThumb}" class="meal-img">
+                         <!--
                          <div class="meal-instructions">${shuffledMeals[i].strInstructions}</div>
-                         <div>
+                         <div> -->
                `
           }
           }
