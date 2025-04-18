@@ -34,9 +34,9 @@ function searchResultUpdate(){
 }
 
 let shuffledMeals;
-
+let d;
 let meals;
-
+let shufflingmeals;
 let shuffle;
 
 food(api);
@@ -44,37 +44,42 @@ food(api);
 async function food(api) {
      showAllMeals.innerHTML = ""
      try{
-          let r = await fetch(api)
-          d = await r.json();
-
-          dispayFood()
-          //console.log(d)
-          let shufflingmeals = d.meals;
-
-          shuffle = (shufflingmeals) => {
-               for (let i = shufflingmeals.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [shufflingmeals[i], shufflingmeals[j]] = [shufflingmeals[j], shufflingmeals[i]];
-               }
-               return shufflingmeals;
-          }
+          let response = await fetch(api)
+          d = await response.json();
 
           
+          //console.log(d)
+          shuffledMeals = d.meals;
+          console.log(d)
+          console.log("Suff Elm 2: ", shuffledMeals[2])
+          // console.log("suff.m: " + shufflingmeals.length)
+          // console.log("d.meals: " + d.meals[2])
+          // function shuffle(shufflingmeals) {
+          //      for (let i = shufflingmeals.length - 1; i > 0; i--) {
+          //           const j = Math.floor(Math.random() * (i + 1));
+          //           [shufflingmeals[i], shufflingmeals[j]] = [shufflingmeals[j], shufflingmeals[i]];
+          //      }
+          //      return shufflingmeals;
+          // }
 
+          
+          dispayFood()
      }
      catch(err){
           console.log(err)
      }
-     shuffledMeals = shuffle(d.meals)
+     //shuffledMeals = shuffle(d.meals)
 }
 
-console.log(shuffle(d.meals)[3])
-console.log(shuffledMeals)
+//console.log(shuffle(d.meals)[3])
+//console.log(shufflingmeals[2])
+//console.log(shuffledMeals[3])
 
 function dispayFood() {
-
+     console.log("Suff Elm 2: ", shuffledMeals[2])
+     //console.log("shuffled: ", shuffledMeals[1])
           try{
-          for(let i = 0; i <= shuffledMeals.length - 1; i++){
+          for(let i = 0; i <= d.meals.length - 1; i++){
                 showAllMeals.innerHTML += `
                          <div class="show-meal">
                          <p class="meal-name">${shuffledMeals[i].strMeal}</p>
