@@ -43,8 +43,6 @@ async function food(api) {
      try{
           let response = await fetch(api)
           d = await response.json();
-
-          
      
           shufflingmeals = d.meals;
           shuffle = (shufflingmeals) => {
