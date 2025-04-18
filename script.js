@@ -3,8 +3,6 @@
 let api = `https://www.themealdb.com/api/json/v1/1/search.php?s=`
 //API FOR ONE RANDOM MEAL = https://www.themealdb.com/api/json/v1/1/random.php
 let showAllMeals = document.getElementsByClassName("all-meals")[0];
-// let meal_photo = document.querySelector("img");
-// let meal_intr = document.getElementsByClassName("meal-instructions")[0];
 let mealValue = document.getElementById("search-food");
 let mealValue_text;
 let search = document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
