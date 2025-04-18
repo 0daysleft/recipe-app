@@ -7,6 +7,8 @@ let mealValue = document.getElementById("search-food");
 let mealValue_text;
 let search = document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
 
+
+
 mealValue.addEventListener('keydown', (e) => {
      if(e.key == 'Enter'){
           searchResultUpdate()
@@ -90,5 +92,7 @@ function dispayFood() {
                }
           
 }
+
+
 
 
