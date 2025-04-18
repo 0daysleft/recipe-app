@@ -99,6 +99,16 @@ button{
   padding: 1rem;
   border: 1px solid #f1e0c8;
   transition: transform 0.3s;
+  animation: fadeIn 5s forwards ease-in-out alternate ;
+}
+
+@keyframes fadeIn {
+     from{
+          opacity: 0;
+     }
+     to{
+          opacity: 1;
+     }
 }
 
 .show-meal:hover {
