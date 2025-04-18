@@ -8,6 +8,7 @@ body{
      background: linear-gradient(to right, #fff8f0, #f9f9f9);
      font-family: 'Segoe UI', sans-serif;
      color: #2e2e2e;
+     position: relative;
 }
 
 nav{
@@ -77,6 +78,8 @@ button{
      display: flex;
      flex-wrap: wrap;
      justify-content: space-around;
+     height: 100vh;
+     width: 95vw;
 }
 
 .show-meal {
@@ -154,7 +157,13 @@ button{
 }
 
 footer{
-     position: static;
+     display: flex;
+     height: 100px;
+     background-color: #00ffe0;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     position: fixed;
      bottom: 0;
      left: 0;
 }
