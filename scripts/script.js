@@ -98,7 +98,8 @@ function dispayFood() {
                document.querySelectorAll('.meal-img').forEach(
                     (ele)=> {
                          ele.addEventListener('click', () => {
-                              sessionStorage.setItem('mealId', ele.id)     
+                              sessionStorage.setItem('mealId', ele.id) 
+                              location.href = './html-files/meal-details.html'    
                          })
                     }
                )
