@@ -68,8 +68,7 @@ async function food(api) {
      catch(err){
           console.log(err)
      }
-     shuffledMeals = shuffle(shufflingmeals)
-     console.log("Shuffled: ", shuffledMeals.length)
+    
 }
 
 //console.log(shuffle(d.meals)[3])
@@ -80,7 +79,6 @@ function dispayFood() {
      //console.log("Suff Elm 2: ", shuffledMeals[2])
      //console.log("shuffled: ", shuffledMeals[1])
      shuffledMeals = shuffle(shufflingmeals)
-     console.log("len: ", shuffledMeals.length)
           try{
           for(let i = 0; i <= shuffledMeals.length - 1; i++){
                 showAllMeals.innerHTML += `
