@@ -103,6 +103,8 @@ function dispayFood() {
                          })
                     }
                )
+
+               console.log(shuffledMeals[0])
                
           
 }
