@@ -85,4 +85,10 @@ function showMealDetails(){
 }
 
 
+setTimeout(
+     () => {
+          document.querySelector('footer').style.display = 'flex';
+     }, 2000
+)
+
 

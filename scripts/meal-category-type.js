@@ -36,7 +36,11 @@ document.querySelector('.navigate').innerHTML = `<h1> <a href="../index.html">Ho
 food(mealCategoryTypeApi)
 dispayFood()
 
-
+setTimeout(
+     () => {
+          document.querySelector('footer').style.display = 'flex';
+     }, 2000
+)
 
 
 

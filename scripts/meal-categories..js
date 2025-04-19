@@ -48,6 +48,12 @@ function displayMealCategories(){
           }
 )
 
+setTimeout(
+     () => {
+          document.querySelector('footer').style.display = 'flex';
+     }, 2000
+)
+
      // document.querySelector('.meal-categories').innerHTML = `
      
      //      <div class="meal-category">
