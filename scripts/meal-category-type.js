@@ -6,8 +6,9 @@ async function fetchMealCategoryTypeData(){
      let mealCategoryTypeApiResponse = fetch(mealCategoryTypeApi)
      mealCategoryTypeApiResponseData = (await mealCategoryTypeApiResponse).json()
 
-     
+     console.log(mealCategoryTypeApiResponseData)
+
 }
 
-
+fetchMealCategoryTypeData()
 
