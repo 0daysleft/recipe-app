@@ -3,12 +3,15 @@ let mealCategoryTypeApi = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=
 let mealCategoryTypeApiResponseData;
 
 async function fetchMealCategoryTypeData(){
-     let mealCategoryTypeApiResponse = fetch(mealCategoryTypeApi)
-     mealCategoryTypeApiResponseData = (await mealCategoryTypeApiResponse).json()
+     let mealCategoryTypeApiResponse = await fetch(mealCategoryTypeApi)
+     mealCategoryTypeApiResponseData = await mealCategoryTypeApiResponse.json()
 
-     console.log(mealCategoryTypeApiResponseData)
+     console.log( mealCategoryTypeApiResponseData.meals[0])
+
+     
 
 }
 
 fetchMealCategoryTypeData()
+
 
