@@ -186,6 +186,7 @@ button{
      border-radius: 12px;
      padding: 1rem;
      border: 1px solid #f1e0c8;
+     cursor: pointer;
 }
 
 .meal-categories .meal-category img{
