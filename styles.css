@@ -162,6 +162,16 @@ button{
      text-align: center;
 }
 
+/* Start Of Meal Category SPage */
+.meal-categories{
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.meal-categories .meal-category{
+     width: 350px;
+}
+
 
 footer{
      display: none;
