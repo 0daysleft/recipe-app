@@ -90,7 +90,6 @@ button{
   padding: 1rem;
   box-sizing: border-box;
   background-color: aquamarine;
-  border-radius: 2rem;
   background: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
   border-radius: 12px;
@@ -165,11 +164,33 @@ button{
      flex-wrap: wrap;
 }
 
+.meal-categories .meal-category h3{
+     text-align: center;
+     border-bottom: 3px dotted #d9d9d9;
+     padding-bottom: .5rem;
+     margin-bottom: 1rem;
+     text-transform: uppercase;
+}
+
 .meal-categories .meal-category{
-     width: 350px;
+     display: flex;
+     flex-direction: column;
      flex: 1;
-     
      gap: 1rem;
+     margin: 1rem;
+     box-sizing: border-box;
+     background-color: aquamarine;
+     background: #ffffff;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+     border-radius: 12px;
+     padding: 1rem;
+     border: 1px solid #f1e0c8;
+}
+
+.meal-categories .meal-category img{
+     border-radius: 2rem;
+     object-fit: contain;
+     max-width: 600px;
 }
 
 
