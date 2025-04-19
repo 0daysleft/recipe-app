@@ -76,18 +76,17 @@ button{
 .all-meals{
      display: flex;
      flex-wrap: wrap;
-     /* justify-content: space-around;
-     width: 95vw; */
+     justify-content: space-around;
 }
 
 .show-meal {
-  width: 350px !important;
+  width: 350px;
   margin: 1rem;
   border: 2px solid red;
   /* display: flex;
   flex-direction: column; */
-  flex: 1;
-  /* align-items: center;
+  /* flex: 1; */
+  align-items: center;
   padding: 1rem;
   box-sizing: border-box;
   background-color: aquamarine;
@@ -98,7 +97,7 @@ button{
   padding: 1rem;
   border: 1px solid #f1e0c8;
   transition: transform 0.3s;
-  animation: fadeIn 2s ease-in forwards; */
+  animation: fadeIn 2s ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -125,7 +124,7 @@ button{
   text-align: center;
 }
 
-.meal-img {
+.show-meal .meal-img {
   width: 100%;
   max-height: 240px;
   object-fit: cover;
