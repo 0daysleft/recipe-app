@@ -8,7 +8,6 @@ body{
      background: linear-gradient(to right, #fff8f0, #f9f9f9);
      font-family: 'Segoe UI', sans-serif;
      color: #2e2e2e;
-     position: relative;
 }
 
 nav{
@@ -78,7 +77,6 @@ button{
      display: flex;
      flex-wrap: wrap;
      justify-content: space-around;
-     height: 100vh;
      width: 95vw;
 }
 
@@ -151,7 +149,7 @@ button{
   border-radius: 8px;
 } */
 
-.marquee, footer{
+.marquee{
      width: 100%;
      padding: 1rem;
      text-align: center;
