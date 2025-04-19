@@ -160,6 +160,11 @@ button{
      margin: 1rem;
 }
 
+.meal-details img{
+     object-fit: contain;
+     border-radius: 2rem;
+}
+
 .meal-details .measure-and-ing{
      display: flex;
      margin: 0 2rem;
