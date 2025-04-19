@@ -160,9 +160,23 @@ button{
      margin: 1rem;
 }
 
-.meal-details .meal-measure-and-ingredients-div{
+.meal-details .measure-and-ing{
      display: flex;
+     margin: 0 2rem;
+     flex-wrap: wrap;
+     justify-content: space-around;
 }
+
+.meal-details .measure-and-ing ul{
+     list-style-type: none;
+     padding: 0 1rem 1rem;
+}
+
+.meal-details .measure-and-ing ul li{
+     padding: .1rem;
+     line-height: 2rem;
+}
+
 
 /* Start Of Meal Category SPage */
 .meal-categories{

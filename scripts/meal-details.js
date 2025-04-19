@@ -68,26 +68,28 @@ function showMealDetails(){
           <img src="${singleMealData.meals[0].strMealThumb}" alt="pancake-img"/>
           
 
-          <div class="meal-measure-and-ingredients-div" >
-               <div class="meal-ingredients">
-                    <h1>Meal Ingredients</h1>
-                         <ul>
-                              ${displayIngredient()}
-                         </ul>
-               </div>
+          <div>
+               <div class='measure-and-ing'>
+                    <div class="meal-ingredients">
+                         <h1>Meal Ingredients</h1>
+                              <ul>
+                                   ${displayIngredient()}
+                              </ul>
+                    </div>
 
-               <div class="meal-measures">
+                    <div class="meal-measures">
 
-                    <h1>Meal Measures</h1>
-                         <ul>
-                              ${displayMeasure()}
-                         </ul>
+                         <h1>Meal Measures</h1>
+                              <ul>
+                                   ${displayMeasure()}
+                              </ul>
+                    </div>
                </div>
           
-          <div class="meal-instructions">
-               <h1>Cooking Instructions</h1>
-               <p> ${singleMealData.meals[0].strInstructions}</p>
-          </div>
+               <div class="meal-instructions">
+                    <h1>Cooking Instructions</h1>
+                    <p> ${singleMealData.meals[0].strInstructions}</p>
+               </div>
           </div>
      </section>
      `
