@@ -164,7 +164,7 @@ button{
 
 
 footer{
-     display: flex;
+     display: none;
      height: 100px;
      background-image: linear-gradient( 135deg, #FFF3B0 10%, #CA26FF 100%);
      justify-content: center;

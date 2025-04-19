@@ -106,6 +106,15 @@ function dispayFood() {
     
 }
 
+// document.querySelectorAll('img').addEventListener('onload', () => {
+//      document.querySelector('footer').style.display = 'flex';
+// })
+
+setTimeout(
+     () => {
+          document.querySelector('footer').style.display = 'flex';
+     }, 2000
+)
 
 
 
