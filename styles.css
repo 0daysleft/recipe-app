@@ -157,6 +157,14 @@ button{
      text-align: center;
 }
 
+
+/* Start Of Meal Details*/
+
+.meal-details{
+     text-align: center;
+}
+
+
 footer{
      display: flex;
      height: 100px;
