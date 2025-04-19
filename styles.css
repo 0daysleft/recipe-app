@@ -102,7 +102,7 @@ button{
   padding: 1rem;
   border: 1px solid #f1e0c8;
   transition: transform 0.3s;
-  animation: fadeIn 5s forwards ease-in-out alternate ;
+  animation: fadeIn 2s ease-in forwards;
 }
 
 @keyframes fadeIn {
