@@ -6,7 +6,7 @@ let showAllMeals = document.getElementsByClassName("all-meals")[0];
 let mealValue = document.getElementById("search-food");
 let mealValue_text;
 
-let search = document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
+document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
 
 
 mealValue.addEventListener('keydown', (e) => {
@@ -69,16 +69,25 @@ export function dispayFood() {
      
      shuffledMeals = shuffleMealsFunction(allMealsObject)
           try{
-          for(let i = 0; i <= shuffledMeals.length - 1; i++){
-                showAllMeals.innerHTML += `
-                         <div class="show-meal">
-                         <p class="meal-name">${shuffledMeals[i].strMeal}</p>
-                         <img src="${shuffledMeals[i].strMealThumb}" class="meal-img" id='${shuffledMeals[i].idMeal}'>
-                         <!--
-                         <div class="meal-instructions">${shuffledMeals[i].strInstructions}</div>
-                         <div> -->
-               `
-          }
+               for(let i = 0; i <= shuffledMeals.length - 1; i++){
+                    showAllMeals.innerHTML += `
+                              <div class="show-meal">
+                              <p class="meal-name">${shuffledMeals[i].strMeal}</p>
+                              <img src="${shuffledMeals[i].strMealThumb}" class="meal-img" id='${shuffledMeals[i].idMeal}'>
+                              <!--
+                              <div class="meal-instructions">${shuffledMeals[i].strInstructions}</div>
+                              <div> -->
+                    `
+               }
+               // let mealId = sessionStorage.getItem('mealId')
+               // let getMealById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
+               // m()
+               // async function m() {
+               //      let v = await fetch(getMealById);
+               //      let r = await v.json();
+               //      console.log("R is: ", r.meals[0].strCategory)
+               //      sessionStorage.setItem('categoryName', r.meals[0].strCategory)
+               // }
           }
           catch(err){
                showAllMeals.innerHTML = `
@@ -100,10 +109,23 @@ export function dispayFood() {
                     (ele)=> {
                          ele.addEventListener('click', () => {
                               sessionStorage.setItem('mealId', ele.id) 
-                              location.href = '../html-files/meal-details.html'    
+                              let mealId = sessionStorage.getItem('mealId')
+let getMealById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
+  m()
+  async function m() {
+  let v = await fetch(getMealById);
+  let r = await v.json();
+  console.log("R is: ", r.meals[0].strCategory)
+  sessionStorage.setItem('categoryName', r.meals[0].strCategory)
+}
+                              location.href = '../html-files/meal-details.html' 
+                              
+   
                          })
                     }
                )
+
+               
     
 }
 

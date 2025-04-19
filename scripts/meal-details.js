@@ -6,6 +6,15 @@ window.onload = () => {
 }
 let getMealById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
 
+//This function if for making sure there is an element in the session storage for category Name
+let mealById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
+  m()
+  async function m() {
+  let v = await fetch(mealById);
+  let r = await v.json();
+  console.log("R is: ", r.meals[0].strCategory)
+  sessionStorage.setItem('categoryName', r.meals[0].strCategory)
+}
 
 let mealElementSection = document.querySelector('.meal-details');
 let singleMealData;
