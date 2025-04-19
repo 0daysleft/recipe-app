@@ -64,7 +64,7 @@ async function food(api) {
 // console.log(document.querySelectorAll('.show-meal'))
 
 
-function dispayFood() {
+export function dispayFood() {
      
      shuffledMeals = shuffleMealsFunction(allMealsObject)
           try{
