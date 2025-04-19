@@ -27,7 +27,7 @@ function c(){
      let list = "";
       for(let i = 0; i <= ingredient; i++ ){
           list += `<li>${singleMealData.meals[0].strIngredient}${i.toString()}</li>`
-          console.log(typeof i.toString())
+          console.log(singleMealData.meals[0].strIngredient+i.toString())
      }
 
      return list;
