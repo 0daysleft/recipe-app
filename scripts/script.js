@@ -109,15 +109,15 @@ export function dispayFood() {
                     (ele)=> {
                          ele.addEventListener('click', () => {
                               sessionStorage.setItem('mealId', ele.id) 
-                              let mealId = sessionStorage.getItem('mealId')
-let getMealById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
-  m()
-  async function m() {
-  let v = await fetch(getMealById);
-  let r = await v.json();
-  console.log("R is: ", r.meals[0].strCategory)
-  sessionStorage.setItem('categoryName', r.meals[0].strCategory)
-}
+                              // let mealId = sessionStorage.getItem('mealId')
+                              // let getMealById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
+                              // m()
+                              // async function m() {
+                              // let v = await fetch(getMealById);
+                              // let r = await v.json();
+                              // console.log("R is: ", r.meals[0].strCategory)
+                              // sessionStorage.setItem('categoryName', r.meals[0].strCategory)
+                              // }
                               location.href = '../html-files/meal-details.html' 
                               
    
