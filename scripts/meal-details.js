@@ -19,7 +19,7 @@ async function getMealDetails(){
 
     const ingredient = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strIngredient")).length;
     const measure = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strMeasure")).length;
- console.log(singleMealData.meals[0])
+ //console.log(singleMealData.meals[0])
 
   displayIngredient = () => {
     let list = "";
