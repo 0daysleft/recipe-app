@@ -28,7 +28,7 @@ function displayMealCategories(){
           (ele) => {
                document.querySelector('.meal-categories').innerHTML += `
      
-                         <div class="meal-category">
+                         <div class="meal-category" id="${ele.strCategory}">
                                    <h3>${ele.strCategory}</h3>
                                    <img src="${ele.strCategoryThumb}" alt="${ele.strCategory}" id="${ele.idCategory}">
                                    <p>${ele.strCategoryDescription}</p>
@@ -36,6 +36,15 @@ function displayMealCategories(){
 
 
      `
+
+     document.querySelectorAll(".meal-category").forEach(
+          (ele) => {
+               ele.addEventListener('click', () => {
+                    sessionStorage.setItem('categoryName', ele.id)
+                    location.href = '../html-files/meal-category-type.html'
+               })
+          }
+     )
           }
 )
 
