@@ -24,14 +24,20 @@ async function getMealDetails(){
 
     
 function c(){
-     let list = "";
-      for(let i = 0; i <= ingredient; i++ ){
-          list += `<li>${singleMealData.meals[0].strIngredient}${i.toString()}</li>`
-          console.log(singleMealData.meals[0].strIngredient+i.toString())
-     }
+    let list = "";
+    const meal = singleMealData.meals[0];
 
-     return list;
+    for(let i = 1; i <= 20; i++) {
+        let ingredient = meal[`strIngredient${i}`];
+        
+        if(ingredient && ingredient.trim() !== "") {
+            list += `<li>${ingredient}</li>`;
+        }
+    }
+
+    return list;
 }
+
 
 document.querySelector('#demo').innerHTML +=
 
