@@ -5,8 +5,8 @@ let api = `https://www.themealdb.com/api/json/v1/1/search.php?s=`
 let showAllMeals = document.getElementsByClassName("all-meals")[0];
 let mealValue = document.getElementById("search-food");
 let mealValue_text;
-let search = document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
 
+let search = document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
 
 
 mealValue.addEventListener('keydown', (e) => {
@@ -40,7 +40,8 @@ let shuffleMealsFunction;
 
 food(api);
 
-async function food(api) {
+export async function food(api) {
+     if(!document.getElementById("searchBtn")) return
      showAllMeals.innerHTML = ""
      try{
           let response = await fetch(api)
@@ -99,7 +100,7 @@ export function dispayFood() {
                     (ele)=> {
                          ele.addEventListener('click', () => {
                               sessionStorage.setItem('mealId', ele.id) 
-                              location.href = './html-files/meal-details.html'    
+                              location.href = '../html-files/meal-details.html'    
                          })
                     }
                )
