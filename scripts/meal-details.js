@@ -59,9 +59,7 @@ getMealDetails()
 function showMealDetails(){
      document.querySelector('.meal-details').innerHTML =
      `
-          <div class='navigation' > <a href="./index.html"><h1>Home</h1></a>/
-          <a href="./html-files/meal-categories.htm"><h1>${singleMealData.meals[0].strCategory}</h1></a> </div>
-          <h1>${singleMealData.meals[0].strMeal}</h1>
+          <div class='navigation' ><h1><a href="./index.html"><h1>Home</h1></a><a href="./html-files/meal-categories.htm"><h1>${singleMealData.meals[0].strCategory}</h1></a>${singleMealData.meals[0].strMeal}</h1></div>
           <img src="${singleMealData.meals[0].strMealThumb}" alt="pancake-img"/>
 
           <div class="meal-ingredients">
