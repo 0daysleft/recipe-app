@@ -156,7 +156,12 @@ button{
 /* Start Of Meal Details*/
 
 .meal-details{
-     text-align: center;
+     display: flex;
+     margin: 1rem;
+}
+
+.meal-details .meal-measure-and-ingredients-div{
+     display: flex;
 }
 
 /* Start Of Meal Category SPage */

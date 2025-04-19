@@ -57,29 +57,38 @@ showMealDetails();
 getMealDetails()
 
 function showMealDetails(){
+     document.querySelector('.navigate').innerHTML = ` <h1><a href="../index.html">Home</a>/
+               <a href="../html-files/meal-categories.htm">Categories</a>/
+               <a href="../html-files/meal-categories.htm">${singleMealData.meals[0].strCategory}</a>
+               /${singleMealData.meals[0].strMeal}</h1>`
      document.querySelector('.meal-details').innerHTML =
      `
-          <div class='navigation' ><h1><a href="../index.html">Home</a>/
-          <a href="../html-files/meal-categories.htm">Categories</a>/
-          <a href="../html-files/meal-categories.htm">${singleMealData.meals[0].strCategory}</a>
-          /${singleMealData.meals[0].strMeal}</h1></div>
+     
+          
           <img src="${singleMealData.meals[0].strMealThumb}" alt="pancake-img"/>
+          
 
-          <div class="meal-ingredients">
-               <h1>Meal Ingredients</h1>
-               <ul>
-                         ${ displayIngredient()}
-               </ul>
-          </div>
+          <div class="meal-measure-and-ingredients-div" >
+               <div class="meal-ingredients">
+                    <h1>Meal Ingredients</h1>
+                         <ul>
+                              ${displayIngredient()}
+                         </ul>
+               </div>
 
-          <div class="meal-measures">
-               <h1>Meal Measures</h1>
-               <ul>
-                    ${displayMeasure()}</ul>
+               <div class="meal-measures">
+
+                    <h1>Meal Measures</h1>
+                         <ul>
+                              ${displayMeasure()}
+                         </ul>
+               </div>
+          
+          <div class="meal-instructions">
+               <h1>Cooking Instructions</h1>
+               <p> ${singleMealData.meals[0].strInstructions}</p>
           </div>
-         <div class="meal-instructions">
-          <h1>Cooking Instructions</h1>
-          <p> ${singleMealData.meals[0].strInstructions}</p>
+          </div>
      </section>
      `
 }
