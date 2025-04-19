@@ -11,14 +11,36 @@ let mealElementSection = document.querySelector('.meal-details');
 
 async function getMealDetails(){
      let response = await fetch(getMealById);
-     let data = await response.json()
+     let singleMealData = await response.json()
 
-    // console.log("Single: ", data.meals[0])
+    // console.log("Single: ", singleMealData.meals[0])
 
-    const ingredient = Object.keys(data.meals[0]).filter(key => key.includes("Ing")).length;
-    const measure = Object.keys(data.meals[0]).filter(key => key.includes("Ing")).length;
+    const ingredient = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strIngredient")).length;
+    const measure = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strMeasure")).length;
 
-    console.log("Meal: ", data.meals[0])
+    console.log("Meal: ", singleMealData.meals[0].strIngredient11)
+
+    console.log("Ingredient: ", ingredient,"Measure: ", measure)
+
+    
+function c(){
+     let list = "";
+      for(let i = 0; i <= ingredient; i++ ){
+          list += `<li>${singleMealData.meals[0].strIngredient}${i.toString()}</li>`
+          console.log(typeof i.toString())
+     }
+
+     return list;
+}
+
+document.querySelector('#demo').innerHTML +=
+
+`
+  <ul>
+${c()}
+ </ul>
+
+`
 }
 
 getMealDetails()
@@ -62,22 +84,5 @@ function showMealDetails(){
      `
 }
 
-function c(){
-     let list = "";
-      for(let i = 0; i <= 10; i++ ){
-          list += `<li>${i}</li>`
-     }
-
-     return list;
-}
-
-document.querySelector('#demo').innerHTML +=
-
-`
-  <ul>
-${c()}
- </ul>
-
-`
 
 
