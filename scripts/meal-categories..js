@@ -10,7 +10,8 @@ async function fetchMealCategories(){
      let categoriesResponse = await fetch(categoriesApi);
      categoriesResponseData = await categoriesResponse.json();
 
-     console.log(categoriesResponseData.categories[0])
+     //console.log(categoriesResponseData.categories[0])
+
      }
      catch(err){
           document.querySelector('.meal-categories').innerHTML = err;
@@ -21,7 +22,11 @@ fetchMealCategories()
 
 function displayMealCategories(){
 
-     categoriesResponseData.categories[0]
+     categoriesResponseData.categories.forEach(
+          (ele) => {
+               console.log(ele)
+          }
+     )
 
      document.querySelector('.meal-categories').innerHTML = `
      
