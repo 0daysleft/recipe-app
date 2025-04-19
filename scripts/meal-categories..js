@@ -4,6 +4,8 @@
 let categoriesApi = 'https://www.themealdb.com/api/json/v1/1/categories.php'
  let categoriesResponseData;
 
+document.querySelector('.navigate').innerHTML = `<h1> <a href="../index.html">Home</a>/Categories</h1>`
+
 async function fetchMealCategories(){
 
      try{
