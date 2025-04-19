@@ -60,7 +60,7 @@ function showMealDetails(){
      document.querySelector('.meal-details').innerHTML =
      `
           <a href="#"><h1>Dessert</h1></a>
-          <h1>Pancakes</h1>
+          <h1>${singleMealData.meals[0].strMeal}</h1>
           <img src="${singleMealData.meals[0].strMealThumb}" alt="pancake-img"/>
 
           <div class="meal-ingredients">
@@ -73,12 +73,11 @@ function showMealDetails(){
           <div class="meal-measures">
                <h1>Meal Measures</h1>
                <ul>
-                    ${displayMeasure()}
-               </ul>
+                    ${displayMeasure()}</ul>
           </div>
          <div class="meal-instructions">
           <h1>Cooking Instructions</h1>
-          <p>  ${singleMealData.meals[0].strInstructions} </p>
+          <p> ${singleMealData.meals[0].strInstructions}</p>
      </section>
      `
 }
