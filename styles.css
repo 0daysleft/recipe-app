@@ -177,6 +177,11 @@ button{
      line-height: 2rem;
 }
 
+.meal-details .meal-instructions {
+     padding: 0 2rem;
+     line-height: 2rem;
+}
+
 
 /* Start Of Meal Category SPage */
 .meal-categories{
