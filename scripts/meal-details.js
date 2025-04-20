@@ -89,7 +89,7 @@ function showMealDetails(){
           
                          <div class="meal-instructions">
                               <h1>Cooking Instructions</h1>
-                              <p> ${(singleMealData.meals[0].strInstructions.replace(/(\d+\))/g, '<strong>$1</strong>')).replace(/\.\s*/g, '.<br> <strong>=> </strong>')}</p>
+                              <p> ${(singleMealData.meals[0].strInstructions.replace(/(\d+\))/g, '<strong>$1</strong>')).replace(/\.\s*/g, '.<br> <strong> => </strong>')}</p>
                          </div>
                </div>
      </section>
