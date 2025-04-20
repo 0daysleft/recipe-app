@@ -187,6 +187,31 @@ button{
      line-height: 2rem;
 }
 
+@media (max-width: 600px){
+     .meal-details{
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .meal-details img{
+          width: 300px;
+          margin-bottom: 2rem;
+     }
+}
+
+@media (max-width: 1200px){
+     .meal-details{
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .meal-details img{
+          width: 450px;
+          margin-bottom: 2rem;
+     }
+}
+
+
 
 /* Start Of Meal Category SPage */
 .meal-categories{
