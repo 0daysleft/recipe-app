@@ -75,6 +75,15 @@ button{
      cursor: pointer;
 }
 
+.navigate{
+   width: 90vw;  
+   margin-left: 2rem;
+}
+
+.navigate a{
+     text-decoration: none;
+}
+
 .all-meals{
      display: flex;
      flex-wrap: wrap;
