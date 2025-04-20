@@ -165,11 +165,8 @@ button{
      border-radius: 2rem;
 }
 
-.meal-details .measure-and-ing{
+.meal-details .cooking-instr{
      display: flex;
-     margin: 0 2rem;
-     flex-wrap: wrap;
-     justify-content: space-around;
 }
 
 .meal-details .meal-ingredients ul{
