@@ -66,6 +66,7 @@ nav{
 }
 
 input, button{
+     width: 30vw;
      padding: 1rem;
      margin: 3rem;
 }
@@ -205,7 +206,16 @@ button{
      padding: 1rem;
 }
 
+@media (max-width: 400px) {
+     input, button{
+          width: 90vw !important;
+     }
+}
+
 @media (max-width: 600px){
+     input, button{
+          width: 30vw;
+     }
      .meal-details{
           flex-direction: column;
           align-items: center;
@@ -279,6 +289,7 @@ footer{
      justify-content: center;
      align-items: center;
      text-align: center;
+     flex-wrap: wrap;
 }
 
 @media screen and (max-width: 450px){
