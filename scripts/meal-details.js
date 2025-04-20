@@ -26,34 +26,38 @@ async function getMealDetails(){
 
     // console.log("Single: ", singleMealData.meals[0])
 
-    const ingredient = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strIngredient")).length;
-    const measure = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strMeasure")).length;
+    const ingredientLength = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strIngredient")).length;
+    const measureLength = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strMeasure")).length;
+
+    console.log(singleMealData.meals[0])
  //console.log(singleMealData.meals[0])
 
-  displayIngredient = () => {
-    let list = "";
-    const meal = singleMealData.meals[0];
+//   displayIngredient = () => {
+//     let list = "";
+//     const meal = singleMealData.meals[0];
 
-    for(let i = 1; i <= ingredient; i++) {
-        let ingredient = meal[`strIngredient${i}`];
+//     for(let i = 1; i <= ingredient; i++) {
+        
 
-        if(ingredient && ingredient.trim() !== "") {
-            list += `<li>${ingredient}</li>`;
-        }
-    }
+//         if() {
+//             list += `<li>${ingredient}</li>`;
+//         }
+//     }
 
-     return list;
-     }
+//      return list;
+//      }
 
 displayMeasure = () => {
     let list = "";
     const meal = singleMealData.meals[0];
-
-    for(let i = 1; i <= measure; i++) {
-        let measure = meal[`strMeasure${i}`];
-
-        if(measure && measure.trim() !== "") {
-            list += `<li>${measure}</li>`;
+    
+    for(let i = 1; i <= ingredientLength; i++) {
+         let measure = meal[`strMeasure${i}`];
+         let ingredient = meal[`strIngredient${i}`];
+        // console.log("M: ", measure)
+         console.log("I: ", ingredient)
+         if(measure && measure.trim() !== "" || ingredient && ingredient.trim() !== "") {
+            list += `<li>${measure} ${ingredient}</li>`;
         }
     }
 
@@ -74,30 +78,19 @@ function showMealDetails(){
      `   
           <img src="${singleMealData.meals[0].strMealThumb}" alt="pancake-img"/>
           
-
-          <div>
-               <div class='measure-and-ing'>
+               <div>
                     <div class="meal-ingredients">
-                         <h1>Meal Ingredients</h1>
-                              <ul>
-                                   ${displayIngredient()}
-                              </ul>
-                    </div>
-
-                    <div class="meal-measures">
-
-                         <h1>Meal Measures</h1>
+                         <h1>Ingredients & Measurements</h1>
                               <ul>
                                    ${displayMeasure()}
                               </ul>
                     </div>
-               </div>
           
-               <div class="meal-instructions">
-                    <h1>Cooking Instructions</h1>
-                    <p> ${singleMealData.meals[0].strInstructions}</p>
+                         <div class="meal-instructions">
+                              <h1>Cooking Instructions</h1>
+                              <p> ${singleMealData.meals[0].strInstructions}</p>
+                         </div>
                </div>
-          </div>
      </section>
      `
 }

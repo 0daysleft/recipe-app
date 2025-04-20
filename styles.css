@@ -172,7 +172,7 @@ button{
      justify-content: space-around;
 }
 
-.meal-details .measure-and-ing ul{
+.meal-details .meal-ingredients ul{
      list-style-type: none;
      padding: 0 1rem 1rem;
 }
