@@ -56,8 +56,9 @@ displayMeasure = () => {
          let ingredient = meal[`strIngredient${i}`];
         // console.log("M: ", measure)
          console.log("I: ", ingredient)
-         if(measure && measure.trim() !== "" || ingredient && ingredient.trim() !== "") {
-            list += `<li>${measure} ${ingredient}</li>`;
+         if(measure && measure.trim() !== "" || ingredient && ingredient.trim() !== ""){
+
+            list += `<li style='border-bottom: 2px dashed grey;' >${measure.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")} ${ingredient.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}</li>`;
         }
     }
 
@@ -88,7 +89,7 @@ function showMealDetails(){
           
                          <div class="meal-instructions">
                               <h1>Cooking Instructions</h1>
-                              <p> ${singleMealData.meals[0].strInstructions}</p>
+                              <p> ${(singleMealData.meals[0].strInstructions.replace(/(\d+\))/g, '<strong>$1</strong>')).replace(/\.\s*/g, '.<br> <strong>=> </strong>')}</p>
                          </div>
                </div>
      </section>
