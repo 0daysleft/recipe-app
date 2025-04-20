@@ -71,10 +71,7 @@ showMealDetails();
 getMealDetails()
 
 function showMealDetails(){
-     document.querySelector('.navigate').innerHTML = ` <h1><a href="../index.html">Home</a>/
-               <a href="../html-files/meal-categories.htm">Categories</a>/
-               <a href="../html-files/meal-category-type.html">${sessionStorage.getItem('categoryName')}</a>
-               /${singleMealData.meals[0].strMeal}</h1>`
+     document.querySelector('.navigate').innerHTML = ` <h5><a href="../index.html">Home</a>><a href="../html-files/meal-categories.htm">Categories</a>><a href="../html-files/meal-category-type.html">${sessionStorage.getItem('categoryName')}</a>>${singleMealData.meals[0].strMeal}</h5>`
      document.querySelector('.meal-details').innerHTML =
      `   
           <img src="${singleMealData.meals[0].strMealThumb}" alt="pancake-img"/>
