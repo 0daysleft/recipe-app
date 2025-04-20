@@ -79,17 +79,15 @@ function showMealDetails(){
      `   
           <img src="${singleMealData.meals[0].strMealThumb}" alt="pancake-img"/>
           
-               <div class="cooking-instr">
                     <div class="meal-ingredients">
                          <h1>Ingredients & Measurements</h1>
                               <ul>
                                    ${displayMeasure()}
                               </ul>
                     </div>
-          
                          <div class="meal-instructions">
                               <h1>Cooking Instructions</h1>
-                              <p> ${(singleMealData.meals[0].strInstructions.replace(/(\d+\))/g, '<strong>$1</strong>')).replace(/\.\s*/g, '.<br> <strong> => </strong>')}</p>
+                              <p> ${singleMealData.meals[0].strInstructions.replace(/(\d+\))/g, '<strong>$1</strong>')}</p>
                          </div>
                </div>
      </section>

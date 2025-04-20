@@ -14,6 +14,7 @@ nav{
      width: 100%;
      display: flex;
      justify-content: space-around;
+     flex-wrap: wrap;
      background-color: dimgrey;
      position: sticky;
      top: 0;
@@ -157,16 +158,17 @@ button{
 
 .meal-details{
      display: flex;
-     margin: 1rem;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+     margin: 2rem;
+     align-items: start;
 }
 
 .meal-details img{
+     width: 500px;
      object-fit: contain;
      border-radius: 2rem;
-}
-
-.meal-details .cooking-instr{
-     display: flex;
+     margin-bottom: 2rem;
 }
 
 .meal-details .meal-ingredients ul{
@@ -180,8 +182,27 @@ button{
 }
 
 .meal-details .meal-instructions {
-     padding: 0 2rem;
+     /* width: 550px;
+     height: 600px; */
+     overflow: auto;
      line-height: 2rem;
+}
+
+.meal-details .meal-instructions h1{
+     position: sticky;
+     top: 0;
+     left: 0;
+     background-color: #00ffe0;
+     width: 100%;
+     height: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.meal-details .meal-instructions p{
+     line-break: loose;
+     padding: 1rem;
 }
 
 @media (max-width: 600px){
@@ -194,6 +215,10 @@ button{
           width: 300px;
           margin-bottom: 2rem;
      }
+     .meal-details .meal-instructions {
+          width: 100%;
+          line-height: 2rem;
+}
 }
 
 @media (max-width: 1200px){
