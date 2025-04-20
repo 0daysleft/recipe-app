@@ -58,7 +58,7 @@ displayMeasure = () => {
          console.log("I: ", ingredient)
          if(measure && measure.trim() !== "" || ingredient && ingredient.trim() !== ""){
 
-            list += `<li style='border-bottom: 2px dashed grey;' >${measure.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")} ${ingredient.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}</li>`;
+            list += `<li style='border-bottom: 2px dashed grey; margin-bottom: 1rem' >${measure.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")} ${ingredient.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}</li>`;
         }
     }
 
