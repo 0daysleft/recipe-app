@@ -9,11 +9,11 @@ let mealValue_text;
 document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
 
 
-mealValue.addEventListener('keydown', (e) => {
-     if(e.key == 'Enter'){
-          searchResultUpdate()
-     }
-})
+// mealValue.addEventListener('keydown', (e) => {
+//      if(e.key == 'Enter'){
+//           searchResultUpdate()
+//      }
+// })
 
 // mealValue.addEventListener('input', () => {
 
