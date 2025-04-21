@@ -1,6 +1,6 @@
 # 🍽️ Meal Explorer – Dynamic Meal Search App
 
-A modern, responsive web app that lets users explore delicious meals via [TheMealDB API](https://www.themealdb.com/api.php). Built with **vanilla JavaScript, HTML5, and CSS Grid**, this application fetches meals dynamically based on user input or displays default meals when no search is performed.
+A modern, responsive web app that lets users explore delicious meals via [TheMealDB API](https://www.themealdb.com/api.php). Built with **vanilla JavaScript, HTML5, and CSS3**, this application fetches meals dynamically based on user input or displays default meals when no search is performed.
 
 ---
 
@@ -42,25 +42,25 @@ A modern, responsive web app that lets users explore delicious meals via [TheMea
 
 ## 🧪 Future Improvements (Ideas) Some will be added,removed, implemented and discerded, The future will tell
 
-- Ingredient-based filtering
+- Ingredient-based filtering (**🚧 In Progress**)
 
-- Random meal generator button
+- Random meal generator button (**🚧 🚧 Almost Done**)
 
-- Category-based filtering (e.g., Vegan, Seafood, etc.)
+- Category-based filtering (e.g., Vegan, Seafood, etc.) (**🚧 🚧 Almost Done**)
 
-- Add dark mode toggle
+- Add dark mode toggle (**🚧 In Progress**)
 
-- Use localStorage to cache recent searches
+- Use localStorage to cache recent searches (**🚧 In Progress**)
   
-- Filter by Area
+- Filter by Area (**🚧 🚧 Almost Done**)
   
-- Filter by main ingredient
+- Filter by main ingredient (**🚧 In Progress**)
   
-- List all Categories, Area, Ingredients
+- List all Categories, Area, Ingredients (**🚧 Almost Done**) 
   
-- Lookup a single random meal
+- Lookup a single random meal (**🚧 Almost Done**)
   
-- Lookup full meal details by id
+- Lookup full meal details (**Done ✅**)
   
-- List all meals by first letter
+- List all meals by first letter (**🚧 Almost Done**)
 
