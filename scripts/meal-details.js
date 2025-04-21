@@ -12,7 +12,6 @@ let mealById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
   async function m() {
   let v = await fetch(mealById);
   let r = await v.json();
-  console.log("R is: ", r.meals[0].strCategory)
   sessionStorage.setItem('categoryName', r.meals[0].strCategory)
 }
 
@@ -29,7 +28,6 @@ async function getMealDetails(){
     const ingredientLength = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strIngredient")).length;
     const measureLength = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strMeasure")).length;
 
-    console.log(singleMealData.meals[0])
  //console.log(singleMealData.meals[0])
 
 //   displayIngredient = () => {
@@ -54,8 +52,7 @@ displayMeasure = () => {
     for(let i = 1; i <= ingredientLength; i++) {
          let measure = meal[`strMeasure${i}`];
          let ingredient = meal[`strIngredient${i}`];
-        // console.log("M: ", measure)
-         console.log("I: ", ingredient)
+
          if(measure && measure.trim() !== "" || ingredient && ingredient.trim() !== ""){
 
             list += `<li style='border-bottom: 2px dashed grey; margin-bottom: 1rem' >${measure.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")} ${ingredient.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}</li>`;
