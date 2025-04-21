@@ -21,18 +21,24 @@ let mealCategoryTypeApiResponseData;
 let mealCategoryTypeArray;
 let arrayLen;
 fetchMealCategoryTypeData()
-async function fetchMealCategoryTypeData(){
-     let mealCategoryTypeApiResponse = await fetch(mealCategoryTypeApi)
-     mealCategoryTypeApiResponseData = await mealCategoryTypeApiResponse.json()
 
-     mealCategoryTypeArray = mealCategoryTypeApiResponseData.meals
-     //console.log(g)
-     displayMealCategoriesByType();
+async function fetchMealCategoryTypeData(){
+     try{
+          let mealCategoryTypeApiResponse = await fetch(mealCategoryTypeApi)
+          mealCategoryTypeApiResponseData = await mealCategoryTypeApiResponse.json()
+
+          mealCategoryTypeArray = mealCategoryTypeApiResponseData.meals
+          displayMealCategoriesByType();
+     }
+     catch(err){
+          console.log("Error: ", err)
+     }
      
 }
 
 function displayMealCategoriesByType(){
 
+     try{
      for(let index = 0; index <= mealCategoryTypeArray.length; index++){
                document.querySelector('.all-meals-categories').innerHTML += 
                          `
@@ -40,7 +46,14 @@ function displayMealCategoriesByType(){
                               <p class="meal-name">${mealCategoryTypeArray[index].strMeal}</p>
                               <img src="${mealCategoryTypeArray[index].strMealThumb}" class="meal-img" id='${mealCategoryTypeArray[index].idMeal}'>   
                          `
-     }      
+     }     
+}
+catch(err){
+     console.log("Display: ", err)
+}
+
+      console.log("Img: ", document.querySelectorAll('img'))
+      console.log(document.querySelectorAll('.show-meal'))
      
      document.querySelectorAll('img').forEach(
                     (ele)=> {
