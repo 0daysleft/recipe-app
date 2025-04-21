@@ -17,18 +17,31 @@ document.querySelector('.navigate').innerHTML = `<h5><a href="../index.html">Hom
 
 //THIS FUNCTION BELOW HERE SHOWS YOU HOW MANY ELEMNTS ARE IN THE CATEGORY PART
 
-// let mealCategoryTypeApiResponseData;
+let mealCategoryTypeApiResponseData;
+let mealCategoryTypeArray;
+let arrayLen;
+fetchMealCategoryTypeData()
+async function fetchMealCategoryTypeData(){
+     let mealCategoryTypeApiResponse = await fetch(mealCategoryTypeApi)
+     mealCategoryTypeApiResponseData = await mealCategoryTypeApiResponse.json()
 
-// async function fetchMealCategoryTypeData(){
-//      let mealCategoryTypeApiResponse = await fetch(mealCategoryTypeApi)
-//      mealCategoryTypeApiResponseData = await mealCategoryTypeApiResponse.json()
-
-//      console.log( mealCategoryTypeApiResponseData.meals)
-
+     mealCategoryTypeArray = mealCategoryTypeApiResponseData.meals
+     //console.log(g)
+     displayMealCategoriesByType();
      
-// }
+}
 
-// fetchMealCategoryTypeData()
+function displayMealCategoriesByType(){
+
+     for(let index = 0; index <= mealCategoryTypeArray.length; index++){
+               document.querySelector('.all-meals-categories').innerHTML += 
+                         `
+                           <div class="show-meal">
+                              <p class="meal-name">${mealCategoryTypeArray[index].strMeal}</p>
+                              <img src="${mealCategoryTypeArray[index].strMealThumb}" class="meal-img" id='${mealCategoryTypeArray[index].idMeal}'>   
+                         `
+     }                            
+}
 
 //if(!document.getElementById("searchBtn")) return
 // shuffleMealsFunction = (allMealsObject) => {

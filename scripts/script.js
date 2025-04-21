@@ -41,7 +41,7 @@ function searchResultUpdate(){
 let shuffledMeals;
 let allMealsData;
 let allMealsObject;
-//export let shuffleMealsFunction;
+let shuffleMealsFunction;
 
 food(api);
 

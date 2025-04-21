@@ -139,7 +139,7 @@ nav ul a{
      height: 80vh;
      margin: auto;
      border-radius: 2rem;
-     background-image: url('./images/food-horizontal-cropped.jpg');
+     background-image: url('../images/food-horizontal-cropped.jpg');
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
@@ -179,7 +179,7 @@ nav ul a{
      align-items: first baseline;
      justify-content: flex-end;
      background: linear-gradient(to left, #ff7a00 0%, rgba(255, 122, 0, 0) 100%); */
-     background-image: url(./images/meal-plate-horizontal-cropped.jpg);
+     background-image: url('../images/meal-plate-horizontal-cropped.jpg');
      background-position: center;
      background-size: cover;
      background-repeat: no-repeat;
