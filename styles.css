@@ -18,18 +18,9 @@ body{
      box-sizing: border-box;
 }
 
-/* Home Page Section */
+/* Navigation Section */
 
-.home-page{
-     width: 100%;
-     height: 100vh;
-     background-image: url('./images/food-horizontal-cropped.jpg');
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-}
-
-.home-page nav{
+nav{
      width: 100%;
      height: max-content;
      display: flex;
@@ -42,10 +33,31 @@ body{
      z-index: 1;
 }
 
-.home-page nav a{ /* Logo*/
+ nav a{ /* Logo*/
      color: #fff;
      text-decoration: none;
      padding: 1rem;
+}
+
+nav ul{
+     list-style-type: none;
+     display: flex;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+     gap: 2rem;
+}
+
+nav ul a{
+     text-decoration: none;
+     color: #fff;
+}
+
+
+/* Home Page Section */
+
+.home-page{
+     width: 100%;
+     height: 100vh;
 }
 
 .logo-btn{
@@ -76,19 +88,6 @@ body{
     justify-content: center;
   }
 
-.home-page nav ul{
-     list-style-type: none;
-     display: flex;
-     justify-content: space-evenly;
-     flex-wrap: wrap;
-     gap: 2rem;
-}
-
-.home-page nav ul a{
-     text-decoration: none;
-     color: #fff;
-}
-
 .marquee-container {
      width: 100%;
      overflow: hidden;
@@ -103,7 +102,7 @@ body{
      font-weight: bold;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      background: linear-gradient(90deg, #00ffe0, #ff00c8, #00ffe0);
-     background-size: 200% auto;
+     background-size: 20% auto;
      -webkit-background-clip: text;
      background-clip: text;
      -webkit-text-fill-color: transparent;
@@ -131,6 +130,17 @@ body{
      100% {
           background-position: 100% center;
      }
+}
+
+.home-page .home-details-bg{
+     width: 80%;
+     height: 80vh;
+     margin: auto;
+     border-radius: 2rem;
+     background-image: url('./images/food-horizontal-cropped.jpg');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 
 .home-page .home-details{
