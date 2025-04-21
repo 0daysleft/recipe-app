@@ -8,7 +8,8 @@ ONLY THE CATEGORY TYPE SHOULD DISPLAY
 
 
 
-import { food, dispayFood, shuffleMealsFunction, allMealsData } from "./script.js";
+//import { food, dispayFood, shuffleMealsFunction, allMealsData } from "./script.js";
+//import { food, dispayFood, allMealsData } from "./script.js";
 
 let mealCategoryTypeApi = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${sessionStorage.getItem('categoryName')}`
 
@@ -30,9 +31,17 @@ document.querySelector('.navigate').innerHTML = `<h5><a href="../index.html">Hom
 // fetchMealCategoryTypeData()
 
 //if(!document.getElementById("searchBtn")) return
-shuffleMealsFunction(allMealsData);
+// shuffleMealsFunction = (allMealsObject) => {
+//                for (let i = allMealsObject.length - 1; i > 0; i--) {
+//                     let j = Math.floor(Math.random() * (i + 1));
+//                     [allMealsObject[i], allMealsObject[j]] = [allMealsObject[j], allMealsObject[i]];
+//                }
+//                return allMealsObject;
+//           }
 
-food(mealCategoryTypeApi)
+
+// food(mealCategoryTypeApi)
+// dispayFood()
 
 setTimeout(
      () => {

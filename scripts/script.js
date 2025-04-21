@@ -10,6 +10,10 @@ if(document.querySelector('.home-search')){
 document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
 }
 
+// if(document.querySelector('.meal-categories')){
+//      shuffleMealsFunction;
+// }
+
 // mealValue.addEventListener('keydown', (e) => {
 //      if(e.key == 'Enter'){
 //           searchResultUpdate()
@@ -35,13 +39,13 @@ function searchResultUpdate(){
 }
 
 let shuffledMeals;
-export let allMealsData;
+let allMealsData;
 let allMealsObject;
-export let shuffleMealsFunction;
+//export let shuffleMealsFunction;
 
 food(api);
 
-export async function food(api) {
+async function food(api) {
      if(!document.getElementById("searchBtn")) return
      showAllMeals.innerHTML = ""
      try{
@@ -51,7 +55,7 @@ export async function food(api) {
           allMealsObject = allMealsData.meals;
           shuffleMealsFunction = (allMealsObject) => {
                for (let i = allMealsObject.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
+                    let j = Math.floor(Math.random() * (i + 1));
                     [allMealsObject[i], allMealsObject[j]] = [allMealsObject[j], allMealsObject[i]];
                }
                return allMealsObject;
@@ -66,9 +70,10 @@ export async function food(api) {
 // console.log(document.querySelectorAll('.show-meal'))
 
 
-export function dispayFood() {
+function dispayFood() {
      
      shuffledMeals = shuffleMealsFunction(allMealsObject)
+     //shuffledMeals = allMealsObject;
           try{
                for(let i = 0; i <= shuffledMeals.length - 1; i++){
                     showAllMeals.innerHTML += `
