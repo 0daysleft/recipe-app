@@ -74,7 +74,7 @@ function showMealDetails(){
           <img src="${singleMealData.meals[0].strMealThumb}" alt="pancake-img"/>
           
                     <div class="meal-ingredients">
-                         <h1>Ingredients & Measurements</h1>
+                         <h1 style=" margin-bottom: 2rem">Ingredients & Measurements</h1>
                               <ul>
                                    ${displayMeasure()}
                               </ul>
