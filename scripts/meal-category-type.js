@@ -36,11 +36,23 @@ function displayMealCategoriesByType(){
      for(let index = 0; index <= mealCategoryTypeArray.length; index++){
                document.querySelector('.all-meals-categories').innerHTML += 
                          `
-                           <div class="show-meal">
+                           <div class="show-meal" style="width: 300px;">
                               <p class="meal-name">${mealCategoryTypeArray[index].strMeal}</p>
                               <img src="${mealCategoryTypeArray[index].strMealThumb}" class="meal-img" id='${mealCategoryTypeArray[index].idMeal}'>   
                          `
-     }                            
+     }      
+     
+     document.querySelectorAll('img').forEach(
+                    (ele)=> {
+                         ele.addEventListener('click', () => {
+                              sessionStorage.setItem('mealId', ele.id) 
+                              location.href = '../html-files/meal-details.html' 
+                              
+   
+                         })
+                    }
+               )
+
 }
 
 //if(!document.getElementById("searchBtn")) return
