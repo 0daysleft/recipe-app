@@ -103,6 +103,15 @@ document.querySelector('nav .logo').addEventListener(
      }
 )
 
+document.querySelector('nav .logo').addEventListener(
+     ('click'), () => {
+          if(!document.querySelector('.home-page')){
+          location.href = '../index.html'
+          }
+     }
+)
+
+
 
 //alert user work in progress
 
