@@ -15,14 +15,14 @@ mealValue.addEventListener('keydown', (e) => {
      }
 })
 
-mealValue.addEventListener('keydown', () => {
+// mealValue.addEventListener('input', () => {
 
-     setTimeout(
-          () => {
-               searchResultUpdate()
-          },3000
-     )
-});
+//      setTimeout(
+//           () => {
+//                searchResultUpdate()
+//           },3000
+//      )
+// });
 
 function searchResultUpdate(){
           if(!mealValue.value) return
