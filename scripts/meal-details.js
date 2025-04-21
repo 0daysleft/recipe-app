@@ -95,4 +95,16 @@ setTimeout(
      }, 2000
 )
 
+//alert user work in progress
+
+document.querySelectorAll('nav ul a').forEach(
+     (value) => {
+          value.addEventListener('click', 
+               () => {
+                    alert('work in progress. Just wait')
+               }
+          )
+     }
+)
+
 
