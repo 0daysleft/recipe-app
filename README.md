@@ -29,10 +29,17 @@ A modern, responsive web app that lets users explore delicious meals via [TheMea
 
 ```bash
 .
-├── index.html            # Main UI layout
-├── styles.css            # Custom grid-based styling
-├── script.js             # All JavaScript logic (API fetch, render, error handling)
-
+├── index.html                  -                      # Main UI layout
+├── html-files
+              ├── meal-categories.html                 # All Meal Categories (eg, Beef, Chicken)
+              ├── meal-category-type.html              # All Meal Categories Type(i.e If Meal category is Beef, All meals which are in beef type)
+              ├── meal-details.html                    # Each Meal in details i.e measures, ingredients and cooking instructions;
+├── styles
+              ├── styles.css                           # Custom flexbox-based styling
+├── script                                             # All JavaScript logic (API fetch, render, error handling)
+              ├── meal-categories.js                   # each corresponding html files data
+              ├── meal-category-type.js                # each corresponding html files data
+              ├── script.js                            # most data is fetched from this script file;
 ```
 ---
 
@@ -65,4 +72,15 @@ A modern, responsive web app that lets users explore delicious meals via [TheMea
 - Lookup full meal details (**Done ✅**)
   
 - List all meals by first letter (**🚧 Almost Done**)
+
+## 🙏 **Acknowledgments**
+
+- 🍲 [TheMealDB API](https://www.themealdb.com/api.php): For providing recipe data
+
+- 👨‍💻 [Florion Pop](https://youtu.be/dtKciwk_si4?si=V_x6SMFN7_NvMelp&t=5002) Video Idea
+  
+- 📸 [Pixar Photos](https://ww.pixar.com/photos): For the beautiful recipe images;
+
+- 💡 [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting): For comprehensive documentation and resources
+
 
