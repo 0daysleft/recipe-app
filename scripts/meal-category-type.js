@@ -52,9 +52,6 @@ catch(err){
      console.log("Display: ", err)
 }
 
-      console.log("Img: ", document.querySelectorAll('img'))
-      console.log(document.querySelectorAll('.show-meal'))
-     
      document.querySelectorAll('img').forEach(
                     (ele)=> {
                          ele.addEventListener('click', () => {
