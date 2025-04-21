@@ -17,9 +17,11 @@ A modern, responsive web app that lets users explore delicious meals via [TheMea
 - 🔎 **Search for meals** using TheMealDB's API
 - 🧠 **Displays default meals** on initial load (`b`-based meals as default)
 - ❌ **Handles "no results" gracefully** with helpful suggestions
-- 🎯 Responsive **CSS Grid layout** optimized for all screen sizes
+- 🎯 Responsive **CSS Flexbox layout** optimized for all screen sizes
 - 🧼 Clean and modular UI with scrollable instructions
 - 🛠️ Fully extendable for API expansion, like meal categories, random picks, or ingredient-based search
+- ✅ Has different sections of meals
+- 🧭 Good navigation sections
 
 ---
 
