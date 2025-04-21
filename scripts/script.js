@@ -145,6 +145,15 @@ setTimeout(
      }, 2000
 )
 
+document.querySelector('nav .logo').addEventListener(
+     ('click'), () => {
+          if(!document.querySelector('.home-page')){
+          location.href = '../index.html'
+          }
+     }
+)
+
+
 // Alert the user work in progress
 
 document.querySelectorAll('nav ul a').forEach(

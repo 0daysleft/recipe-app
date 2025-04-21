@@ -77,6 +77,15 @@ setTimeout(
 */
 //Alert Message
 
+document.querySelector('nav .logo').addEventListener(
+     ('click'), () => {
+          if(!document.querySelector('.home-page')){
+          location.href = '../index.html'
+          }
+     }
+)
+
+
 document.querySelectorAll('nav ul a').forEach(
      (value) => {
           value.addEventListener('click', 
