@@ -6,8 +6,9 @@ let showAllMeals = document.getElementsByClassName("all-meals")[0];
 let mealValue = document.getElementById("search-food");
 let mealValue_text;
 
+if(document.querySelector('.home-search')){
 document.getElementById("searchBtn").addEventListener('click', searchResultUpdate);
-
+}
 
 // mealValue.addEventListener('keydown', (e) => {
 //      if(e.key == 'Enter'){
@@ -34,9 +35,9 @@ function searchResultUpdate(){
 }
 
 let shuffledMeals;
-let allMealsData;
+export let allMealsData;
 let allMealsObject;
-let shuffleMealsFunction;
+export let shuffleMealsFunction;
 
 food(api);
 
