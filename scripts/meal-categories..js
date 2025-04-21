@@ -75,4 +75,16 @@ setTimeout(
 }
 
 */
+//Alert Message
+
+document.querySelectorAll('nav ul a').forEach(
+     (value) => {
+          value.addEventListener('click', 
+               () => {
+                    alert('work in progress. Just wait')
+               }
+          )
+     }
+)
+
 
