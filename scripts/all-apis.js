@@ -48,16 +48,20 @@
 
 let api_cuisine =  `https://www.themealdb.com/api/json/v1/1/list.php?a=list`
 let api_cuisine_meal =  `https://www.themealdb.com/api/json/v1/1/filter.php?a=kenyan`
-
+let cuisinesArray = []
 async function allData(){
-     let response = await fetch(api_cuisine_meal);
+     let response = await fetch(api_cuisine);
      let data = await response.json()
 
-     console.log(data)
+     for(let i = 0; i <= data.meals.length - 1; i++){
+     console.log(data.meals[i].strArea);
+     cuisinesArray.push(data.meals[i].strArea);
+     }
 
 }
 
 
 allData();
-
-
+setTimeout( () => {
+console.log(cuisinesArray)
+}, 5000);
