@@ -419,6 +419,9 @@ button{
 }
 
 @media (max-width: 400px) {
+     nav ul{
+          display: none;
+     }
      .home-page .home-details-bg{
           height: 100vh !important;
      }
@@ -443,6 +446,20 @@ button{
           margin: 1rem 0;
           font-size: 1rem;
           background-color: rgba(100, 30, 12, .4);
+     }
+
+     .home-details button{
+          padding: 0 !important;
+          position: relative;
+     }
+
+     .home-details button .logo-btn {
+          position: absolute;
+          font-weight: bold;
+          max-height: 40px;
+          max-width: 40px;
+          margin-left: 0rem;
+          right: 1rem;
      }
 
      .home-details button a{
