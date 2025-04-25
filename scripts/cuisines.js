@@ -6,14 +6,15 @@ const fetchCuisines = async () => {
      let cuisineApiResponse = await fetch(cuisineApi);
      let cuisineApiResponseData = await cuisineApiResponse.json();
 
-      for(let i = 0; i <= data.meals.length - 1; i++){
-               console.log(data.meals[i].strArea);
-               cuisinesArray.push(data.meals[i].strArea);
+
+      for(let i = 0; i <= cuisineApiResponseData.meals.length - 1; i++){
+               //console.log(data.meals[i].strArea);
+               //cuisinesArray.push(data.meals[i].strArea);
                
                document.querySelector('.cuisines').innerHTML += 
                               `
                                    <div class='show-meal'>
-                                        <p>${data.meals[i].strArea}</p>
+                                        <p>${cuisineApiResponseData.meals[i].strArea}</p>
                                    <div>
                               `
       }
