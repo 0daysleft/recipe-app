@@ -440,7 +440,22 @@ button{
      .meal-details .meal-instructions {
           width: 100%;
           line-height: 2rem;
+     }
+
 }
+
+@media (max-widht: 500px) {
+     .home-search .home-search-flex-div{
+          max-width: 90%;
+          display: flex;
+          height: 70%;
+          flex-direction: column;
+          margin: 0;
+     }
+
+     .home-search .home-search-flex-div > * {
+          margin: 0 !important;
+     }
 }
 
 @media (max-width: 1200px){
@@ -511,9 +526,6 @@ input, button{
      margin: 1rem;
 }
 }
-
-
-
 
 
 /* Cuisine */
