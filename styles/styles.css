@@ -511,6 +511,13 @@ button{
                height: 3.3rem;
      }
 
+     .home-search .search .search-input {
+          margin-left: 1.3rem;
+          font-size: 2rem;
+          max-width: 83%;
+          height: 90px !important;
+     }
+
      input, button{
           width: 90vw !important;
      }
