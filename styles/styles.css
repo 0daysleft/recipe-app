@@ -511,3 +511,65 @@ input, button{
      margin: 1rem;
 }
 }
+
+
+
+
+
+/* Cuisine */
+
+.cuisines{
+     max-width: 90%;
+     margin: 0 auto;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+     text-align: center;
+}
+
+.cuisine{
+     min-width: 200px;
+     height: 250px;
+     flex: 1;
+     text-align: center;
+     border: 2px solid #111;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 2rem;
+     cursor: pointer;
+     position: relative; 
+}
+
+.cuisine::before {
+    content: "Work in Progress";
+    position: absolute;
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: transparent;
+    opacity: 0;
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-weight: bold;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.cuisine:hover{
+      filter: brightness(0.4);
+}
+
+.cuisine:hover::before {
+     opacity: 1;
+     background-color: #CA26FF;
+     z-index: 1;
+     color: #00ffe0;
+}
+

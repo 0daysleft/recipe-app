@@ -8,17 +8,17 @@ const fetchCuisines = async () => {
 
      console.log(cuisineApiResponseData)
 
-     //  for(let i = 0; i <= cuisineApiResponseData.meals.length - 1; i++){
-     //           //console.log(data.meals[i].strArea);
-     //           //cuisinesArray.push(data.meals[i].strArea);
+      for(let i = 0; i <= cuisineApiResponseData.meals.length - 1; i++){
+               //console.log(data.meals[i].strArea);
+               //cuisinesArray.push(data.meals[i].strArea);
                
-     //           document.querySelector('.cuisines').innerHTML += 
-     //                          `
-     //                               <div class='show-meal'>
-     //                                    <p>${cuisineApiResponseData.meals[i].strArea}</p>
-     //                               <div>
-     //                          `
-     //  }
+               document.querySelector('.cuisines').innerHTML += 
+                              `
+                                   <div class='cuisine'>
+                                        <p>${cuisineApiResponseData.meals[i].strArea}</p>
+                                   <div>
+                              `
+      }
 
 }
 
