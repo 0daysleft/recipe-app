@@ -13,7 +13,7 @@ ONLY THE CATEGORY TYPE SHOULD DISPLAY
 
 let mealCategoryTypeApi = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${sessionStorage.getItem('categoryName')}`
 
-document.querySelector('.navigate').innerHTML = `<h5><a href="../index.html">Home</a> <i class="fa-solid fa-angle-right"></i> <a href="../html-files/meal-categories.htm">Categories</a> <i class="fa-solid fa-angle-right"></i> ${sessionStorage.getItem('categoryName')} </h5>`
+document.querySelector('.navigate').innerHTML = `<h5><a href="../index.html">Home</a> <i class="fa-solid fa-angle-right"></i> <a href="../html-files/meal-type.html">Recipes Categories</a> <i class="fa-solid fa-angle-right"></i> ${sessionStorage.getItem('categoryName')} Recipes </h5>`
 
 //THIS FUNCTION BELOW HERE SHOWS YOU HOW MANY ELEMNTS ARE IN THE CATEGORY PART
 

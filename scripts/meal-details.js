@@ -68,7 +68,7 @@ showMealDetails();
 getMealDetails()
 
 function showMealDetails(){
-     document.querySelector('.navigate').innerHTML = ` <h5><a href="../index.html">Home</a> <i class="fas fa-angle-right"></i> <a href="../html-files/meal-categories.htm">Categories</a> <i class="fa-solid fa-angle-right"></i> <a href="../html-files/meal-category-type.html">${sessionStorage.getItem('categoryName')}</a> <i class="fa-solid fa-angle-right"></i> ${singleMealData.meals[0].strMeal}</h5>`
+     document.querySelector('.navigate').innerHTML = ` <h5><a href="../index.html">Home</a> <i class="fas fa-angle-right"></i> <a href="../html-files/meal-type.html">Recipes Categories</a> <i class="fa-solid fa-angle-right"></i> <a href="../html-files/recipes.html">${sessionStorage.getItem('categoryName')} Recipes</a> <i class="fa-solid fa-angle-right"></i> ${singleMealData.meals[0].strMeal}</h5>`
      document.querySelector('.meal-details').innerHTML =
      `   
           <img src="${singleMealData.meals[0].strMealThumb}" alt="pancake-img"/>

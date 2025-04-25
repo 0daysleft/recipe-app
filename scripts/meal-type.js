@@ -4,7 +4,7 @@
 let categoriesApi = 'https://www.themealdb.com/api/json/v1/1/categories.php'
  let categoriesResponseData;
 
-document.querySelector('.navigate').innerHTML = `<h5> <a href="../index.html">Home</a> <i class="fa-solid fa-angle-right"></i> Categories</h5>`
+document.querySelector('.navigate').innerHTML = `<h5> <a href="../index.html">Home</a> <i class="fa-solid fa-angle-right"></i>Recipes Categories</h5>`
 
 async function fetchMealCategories(){
 
@@ -43,7 +43,7 @@ function displayMealCategories(){
           (ele) => {
                ele.addEventListener('click', () => {
                     sessionStorage.setItem('categoryName', ele.id)
-                    location.href = '../html-files/meal-category-type.html'
+                    location.href = '../html-files/recipes.html'
                })
           }
      )
