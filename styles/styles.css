@@ -296,6 +296,7 @@ button{
   width: 300px;
   max-width: 350px;
   margin: 1rem auto ;
+  height: 400px;
   border: 2px solid red;
   /* display: flex;
   flex-direction: column; */
@@ -310,7 +311,7 @@ button{
   padding: 1rem;
   border: 1px solid #f1e0c8;
   transition: transform 0.3s;
-  animation: fadeIn 2s ease-in forwards;
+  animation: fadeIn .5s ease-in forwards;
 }
 
 @keyframes fadeIn {

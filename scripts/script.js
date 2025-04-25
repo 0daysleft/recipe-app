@@ -36,6 +36,7 @@ function searchResultUpdate(){
           showAllMeals.innerHTML = ""
           food(api);
           mealValue.value = "";
+          setTimeout( () => {location.href = "#all-meals"}, 1000)
 }
 
 let shuffledMeals;
