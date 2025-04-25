@@ -419,6 +419,41 @@ button{
 }
 
 @media (max-width: 400px) {
+     .home-page .home-details-bg{
+          height: 100vh !important;
+     }
+     .home-page .home-details-bg{
+          background-image: url('../images/meal-vertical.jpg');
+          width: 100%;
+          height: 100%;
+     }
+
+     .home-details{
+          width: 90% !important;
+          height: 100vh;
+          margin: 1rem !important;
+          display: flex;
+          justify-content: space-between;
+     }
+     .section-okemwa-recipe-h1{
+          font-size: 1rem !important;
+     }
+
+     .home-page .home-details h5{
+          margin: 1rem 0;
+          font-size: 1rem;
+          background-color: rgba(100, 30, 12, .4);
+     }
+
+     .home-details button a{
+          font-size: 1rem !important;
+          padding: 1rem !important;
+     }
+
+     #search-section .home-search{
+          margin: 0 !important;
+          height: 100vh !important;
+     }
      input, button{
           width: 90vw !important;
      }
@@ -433,6 +468,11 @@ button{
           align-items: center;
      }
 
+     /* .only-for-bg{
+          margin: 0;
+          padding: 0;
+     } */
+
      .meal-details img{
           width: 300px;
           margin-bottom: 2rem;
@@ -443,7 +483,7 @@ button{
      }
 
 }
-
+/* 
 @media (max-widht: 500px) {
      .home-search .home-search-flex-div{
           max-width: 90%;
@@ -456,7 +496,7 @@ button{
      .home-search .home-search-flex-div > * {
           margin: 0 !important;
      }
-}
+} */
 
 @media (max-width: 1200px){
      .meal-details{
