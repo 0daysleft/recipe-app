@@ -6,9 +6,11 @@ const fetchCuisines = async () => {
      let cuisineApiResponse = await fetch(cuisineApi);
      let cuisineApiResponseData = await cuisineApiResponse.json();
 
-     console.log(cuisineApiResponseData)
+     //console.log(cuisineApiResponseData)
 
-      for(let i = 0; i <= cuisineApiResponseData.meals.length - 1; i++){
+     //The four in the loop is to not show all the cuisine just a few and the user will be taken to all other cuisines if they click any cuisine
+     
+      for(let i = 0; i <= 4; i++){
                //console.log(data.meals[i].strArea);
                //cuisinesArray.push(data.meals[i].strArea);
                
