@@ -572,6 +572,17 @@ button{
           width: 300px;
           margin-bottom: 2rem;
      }
+
+     .home-search .home-search-flex-div {
+          margin: 0 !important;
+          width: 100%;
+          text-align: center;
+     }
+
+     .home-search .search {
+
+          margin: 4rem auto;
+}
 }
 
 
