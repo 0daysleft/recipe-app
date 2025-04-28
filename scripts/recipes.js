@@ -8,9 +8,6 @@ ONLY THE CATEGORY TYPE SHOULD DISPLAY
 
 
 
-//import { food, dispayFood, shuffleMealsFunction, allMealsData } from "./script.js";
-//import { food, dispayFood, allMealsData } from "./script.js";
-
 let mealCategoryTypeApi = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${sessionStorage.getItem('categoryName')}`
 
 document.querySelector('.navigate').innerHTML = `<h5><a href="../index.html">Home</a> <i class="fa-solid fa-angle-right"></i> <a href="../html-files/meal-type.html">Recipes Categories</a> <i class="fa-solid fa-angle-right"></i> ${sessionStorage.getItem('categoryName')} Recipes </h5>`
