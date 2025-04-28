@@ -1,10 +1,10 @@
 
-
+let cuisineApiResponseData;
 let cuisineApi = `https://www.themealdb.com/api/json/v1/1/list.php?a=list`
 
 const fetchCuisines = async () => {
      let cuisineApiResponse = await fetch(cuisineApi);
-     let cuisineApiResponseData = await cuisineApiResponse.json();
+     cuisineApiResponseData = await cuisineApiResponse.json();
 
      //The four in the loop is to not show all the cuisine just a few and the user will be taken to all other cuisines if they click any cuisine
      let arrayToShuffle = cuisineApiResponseData.meals;
@@ -40,8 +40,8 @@ fetchCuisines()
 function displayCuisines(){
      document.querySelector(".cuisine-container").innerHTML = 
                `
-                    <div>
-                         
+                    <div class='cuisine-box'>
+
                     </div>
                `
 }
