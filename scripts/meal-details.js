@@ -23,8 +23,6 @@ async function getMealDetails(){
      let response = await fetch(getMealById);
      singleMealData = await response.json()
 
-    // console.log("Single: ", singleMealData.meals[0])
-
     const ingredientLength = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strIngredient")).length;
     const measureLength = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strMeasure")).length;
 
