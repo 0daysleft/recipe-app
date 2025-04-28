@@ -30,7 +30,7 @@ const fetchCuisines = async () => {
                document.querySelector('.cuisines').innerHTML += 
                               `
                                    <div class='cuisine'>
-                                        <p>${arrayToShuffle[i].strArea}</p>
+                                        <p>${shuffledCuisines(arrayToShuffle)[i].strArea}</p>
                                    <div>
                               `
           }
@@ -43,12 +43,14 @@ const fetchCuisines = async () => {
 fetchCuisines()
 
 function displayCuisines(){
-     document.querySelector(".cuisine-container").innerHTML = 
-               `
-                    <div class='cuisine-box'>
-                              <p>${shuffledCuisines(arrayToShuffle)[i].strArea}</p>
-                    </div>
-               `
+     for(let i = 0; i <= arrayToShuffle.length -1; i++){
+          document.querySelector(".cuisine-container").innerHTML = 
+                    `
+                         <div class='cuisine-box'>
+                                   <p>${shuffledCuisines(arrayToShuffle)[i].strArea}</p>
+                         </div>
+                    `
+     }
 }
 
 // Alert the user work in progress
