@@ -46,7 +46,7 @@ function displayCuisines(){
      for(let i = 0; i <= arrayToShuffle.length -1; i++){
           document.querySelector(".cuisine-container").innerHTML += 
                     `
-                         <div class='cuisine-box'>
+                         <div class='cuisine-box' id='${shuffledCuisines(arrayToShuffle)[i].strArea}'>
                                    <p>${shuffledCuisines(arrayToShuffle)[i].strArea}</p>
                          </div>
                     `
