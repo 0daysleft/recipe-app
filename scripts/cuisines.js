@@ -9,7 +9,7 @@ const fetchCuisines = async () => {
 
      //The four in the loop is to not show all the cuisine just a few and the user will be taken to all other cuisines if they click any cuisine
      arrayToShuffle = cuisineApiResponseData.meals;
-     console.log(arrayToShuffle)
+     //console.log(arrayToShuffle)
      function shuffledCuisines(array) {
           for (let i = array.length - 1; i > 0; i--) {
                let random = Math.floor(Math.random() * (i + 1)); 
@@ -34,6 +34,8 @@ const fetchCuisines = async () => {
                               `
       }
 
+      displayCuisines()
+
 }
 
 fetchCuisines()
@@ -42,7 +44,7 @@ function displayCuisines(){
      document.querySelector(".cuisine-container").innerHTML = 
                `
                     <div class='cuisine-box'>
-
+                              <p>${shuffledCuisines(arrayToShuffle)[i].strArea}</p>
                     </div>
                `
 }
