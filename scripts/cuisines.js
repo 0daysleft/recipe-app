@@ -37,6 +37,13 @@ const fetchCuisines = async () => {
 
 fetchCuisines()
 
+function displayCuisines(){
+     document.querySelector(".cuisine-container").innerHTML = 
+               `
+               
+               `
+}
+
 // Alert the user work in progress
 
 document.querySelectorAll('nav ul a').forEach(
