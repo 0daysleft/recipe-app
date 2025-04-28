@@ -62,19 +62,6 @@ catch(err){
 
 }
 
-//if(!document.getElementById("searchBtn")) return
-// shuffleMealsFunction = (allMealsObject) => {
-//                for (let i = allMealsObject.length - 1; i > 0; i--) {
-//                     let j = Math.floor(Math.random() * (i + 1));
-//                     [allMealsObject[i], allMealsObject[j]] = [allMealsObject[j], allMealsObject[i]];
-//                }
-//                return allMealsObject;
-//           }
-
-
-// food(mealCategoryTypeApi)
-// dispayFood()
-
 setTimeout(
      () => {
           document.querySelector('footer').style.display = 'flex';
