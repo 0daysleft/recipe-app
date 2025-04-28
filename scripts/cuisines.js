@@ -30,7 +30,7 @@ const fetchCuisines = async () => {
                document.querySelector('.cuisines').innerHTML += 
                               `
                                    <div class='cuisine'>
-                                        <p>${shuffledCuisines(arrayToShuffle)[i].strArea}</p>
+                                        <p>${arrayToShuffle[i].strArea}</p>
                                    <div>
                               `
           }
