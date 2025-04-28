@@ -6,19 +6,8 @@ const fetchCuisines = async () => {
      let cuisineApiResponse = await fetch(cuisineApi);
      let cuisineApiResponseData = await cuisineApiResponse.json();
 
-     //console.log(cuisineApiResponseData)
-
      //The four in the loop is to not show all the cuisine just a few and the user will be taken to all other cuisines if they click any cuisine
      let arrayToShuffle = cuisineApiResponseData.meals;
-
-     // function shuffledCuisines(array){
-     //      for(let i = array.length -1; i >= 0; i--){
-     //           let random = Math.floor(Math.random() * (i + 1))
-     //           [array[i], array[random]] = [array[random], array[i]]
-     //      }
-
-     //      return array;
-     // }
 
      function shuffledCuisines(array) {
           for (let i = array.length - 1; i > 0; i--) {
