@@ -14,11 +14,11 @@ document.getElementById("searchBtn").addEventListener('click', searchResultUpdat
 //      shuffleMealsFunction;
 // }
 
-// mealValue.addEventListener('keydown', (e) => {
-//      if(e.key == 'Enter'){
-//           searchResultUpdate()
-//      }
-// })
+mealValue.addEventListener('keydown', (e) => {
+     if(e.key == 'Enter'){
+          searchResultUpdate()
+     }
+})
 
 // mealValue.addEventListener('input', () => {
 
