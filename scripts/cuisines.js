@@ -44,7 +44,7 @@ fetchCuisines()
 
 function displayCuisines(){
      for(let i = 0; i <= arrayToShuffle.length -1; i++){
-          document.querySelector(".cuisine-container").innerHTML = 
+          document.querySelector(".cuisine-container").innerHTML += 
                     `
                          <div class='cuisine-box'>
                                    <p>${shuffledCuisines(arrayToShuffle)[i].strArea}</p>
