@@ -28,23 +28,6 @@ async function getMealDetails(){
     const ingredientLength = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strIngredient")).length;
     const measureLength = Object.keys(singleMealData.meals[0]).filter(key => key.includes("strMeasure")).length;
 
- //console.log(singleMealData.meals[0])
-
-//   displayIngredient = () => {
-//     let list = "";
-//     const meal = singleMealData.meals[0];
-
-//     for(let i = 1; i <= ingredient; i++) {
-        
-
-//         if() {
-//             list += `<li>${ingredient}</li>`;
-//         }
-//     }
-
-//      return list;
-//      }
-
 displayMeasure = () => {
     let list = "";
     const meal = singleMealData.meals[0];
