@@ -68,8 +68,6 @@ async function food(api) {
      }
 }
 
-// console.log(document.querySelectorAll('.show-meal'))
-
 
 function dispayFood() {
      
@@ -85,7 +83,7 @@ function dispayFood() {
                               <div> -->
                     `
                }
-               // let mealId = sessionStorage.getItem('mealId')
+          
           }
           catch(err){
                showAllMeals.innerHTML = `
