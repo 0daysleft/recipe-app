@@ -74,7 +74,6 @@ async function food(api) {
 function dispayFood() {
      
      shuffledMeals = shuffleMealsFunction(allMealsObject)
-     //shuffledMeals = allMealsObject;
           try{
                for(let i = 0; i <= shuffledMeals.length - 1; i++){
                     showAllMeals.innerHTML += `
@@ -87,14 +86,6 @@ function dispayFood() {
                     `
                }
                // let mealId = sessionStorage.getItem('mealId')
-               // let getMealById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
-               // m()
-               // async function m() {
-               //      let v = await fetch(getMealById);
-               //      let r = await v.json();
-               //      console.log("R is: ", r.meals[0].strCategory)
-               //      sessionStorage.setItem('categoryName', r.meals[0].strCategory)
-               // }
           }
           catch(err){
                showAllMeals.innerHTML = `
@@ -116,15 +107,6 @@ function dispayFood() {
                     (ele)=> {
                          ele.addEventListener('click', () => {
                               sessionStorage.setItem('mealId', ele.id) 
-                              // let mealId = sessionStorage.getItem('mealId')
-                              // let getMealById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
-                              // m()
-                              // async function m() {
-                              // let v = await fetch(getMealById);
-                              // let r = await v.json();
-                              // console.log("R is: ", r.meals[0].strCategory)
-                              // sessionStorage.setItem('categoryName', r.meals[0].strCategory)
-                              // }
                               location.href = '../html-files/meal-details.html' 
                               
    
@@ -135,10 +117,6 @@ function dispayFood() {
                
     
 }
-
-// document.querySelectorAll('img').addEventListener('onload', () => {
-//      document.querySelector('footer').style.display = 'flex';
-// })
 
 setTimeout(
      () => {
