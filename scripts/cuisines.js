@@ -37,3 +37,14 @@ const fetchCuisines = async () => {
 
 fetchCuisines()
 
+// Alert the user work in progress
+
+document.querySelectorAll('nav ul a').forEach(
+     (value) => {
+          value.addEventListener('click', 
+               () => {
+                    alert('work in progress. Just wait')
+               }
+          )
+     }
+)
