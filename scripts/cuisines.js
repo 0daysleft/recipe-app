@@ -40,7 +40,9 @@ fetchCuisines()
 function displayCuisines(){
      document.querySelector(".cuisine-container").innerHTML = 
                `
-               
+                    <div>
+                         
+                    </div>
                `
 }
 
