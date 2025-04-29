@@ -40,13 +40,17 @@ const fetchCuisines = async () => {
      //      }
      // }
 
+     let country = await fetch(`https://flagcdn.com/en/codes.json`);
+     let name = await country.json();
+     console.log(name)
+
       displayCuisines()
 
      document.querySelectorAll(".cuisine-box").forEach(
           (cuisine) => {
                     cuisine.addEventListener('click', 
                     () => {
-                         console.log(cuisine)
+                         
                     }
                )
      })
