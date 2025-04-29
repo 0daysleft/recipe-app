@@ -45,13 +45,13 @@ const fetchCuisines = async () => {
      //console.log(name['ae'])
 
      function getKeyByValue(object, value) {
-  for (let key in object) {
-    if (object[key] === value) {
-      return key;
-    }
-  }
-  return null; // Return null if the value is not found
-}
+          for (let key in object) {
+               if (object[key] === value) {
+                    return key;
+               }
+          }    
+          return 'Value Not Found'; // Return null if the value is not found
+     }
 
 let key = getKeyByValue(name, 'United Arab Emirates');
 console.log(key); // Output: 'two'
