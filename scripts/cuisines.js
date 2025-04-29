@@ -51,6 +51,14 @@ function displayCuisines(){
                          </div>
                     `
      }
+     
+document.querySelectorAll(".cuisine-container").forEach( (cuisine) => {
+     cuisine.addEventListener('click', 
+     () => {
+          console.log(cuisine.id)
+     }
+)
+})
 }
 
 // Alert the user work in progress
@@ -64,11 +72,3 @@ document.querySelectorAll('nav ul a').forEach(
           )
      }
 )
-
-document.querySelectorAll(".cuisine-container").forEach( (cuisine) => {
-     cuisine.addEventListener('click', 
-     () => {
-          console.log(document.querySelector(".cuisine-box").id)
-     }
-)
-})
