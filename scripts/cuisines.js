@@ -77,6 +77,7 @@ function displayCuisines(){
                     `
                          <div class='cuisine-box' id='${arrayToShuffle[i].strArea}'>
                                    <p>${arrayToShuffle[i].strArea}</p>
+                                   <img src='https://flagcdn.com/256x192/ua.png'/>
                          </div>
                     `
      }
