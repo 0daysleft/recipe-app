@@ -10,17 +10,18 @@ const fetchCuisines = async () => {
 
      //The four in the loop is to not show all the cuisine just a few and the user will be taken to all other cuisines if they click any cuisine
      arrayToShuffle = cuisineApiResponseData.meals;
+
      //console.log(arrayToShuffle)
-     console.log(arrayToShuffle.length)
-     console.log(arrayToShuffle)
+     // console.log(arrayToShuffle.length)
+      console.log(arrayToShuffle)
 
      shuffledCuisines = (array) => {
           for (let i = array.length - 1; i > 0; i--) {
                let random = Math.floor(Math.random() * (i + 1)); 
                [array[i], array[random]] = [array[random], array[i]];
+          }
+     return array;
      }
-    return array;
-}
 
 
      // console.log(shuffledCuisines(arrayToShuffle))
@@ -33,13 +34,21 @@ const fetchCuisines = async () => {
                document.querySelector('.cuisines').innerHTML += 
                               `
                                    <div class='cuisine'>
-                                        <p>${shuffledCuisines(arrayToShuffle)[i].strArea}</p>
+                                        <p>${arrayToShuffle[i].strArea}</p>
                                    <div>
                               `
           }
      }
 
       displayCuisines()
+
+     // document.querySelectorAll(".cuisine-container").forEach( (cuisine) => {
+               //      cuisine.addEventListener('click', 
+               //      () => {
+               //           console.log(document.querySelector(".cuisine-box"))
+               //      }
+               // )
+     // })
 
 }
 
@@ -49,19 +58,12 @@ function displayCuisines(){
      for(let i = 0; i <= arrayToShuffle.length -1; i++){
           document.querySelector(".cuisine-container").innerHTML += 
                     `
-                         <div class='cuisine-box' id='${shuffledCuisines(arrayToShuffle)[i].strArea}'>
-                                   <p>${shuffledCuisines(arrayToShuffle)[i].strArea}</p>
+                         <div class='cuisine-box' id='${arrayToShuffle[i].strArea}'>
+                                   <p>${arrayToShuffle[i].strArea}</p>
                          </div>
                     `
      }
      
-document.querySelectorAll(".cuisine-container").forEach( (cuisine) => {
-     cuisine.addEventListener('click', 
-     () => {
-          console.log(document.querySelector(".cuisine-box"))
-     }
-)
-})
 }
 
 // Alert the user work in progress
