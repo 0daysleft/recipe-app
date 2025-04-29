@@ -64,3 +64,9 @@ document.querySelectorAll('nav ul a').forEach(
           )
      }
 )
+
+document.querySelector(".cuisine-box").addEventListener('click', 
+     () => {
+          console.log(document.querySelector(".cuisine-box").id)
+     }
+)
