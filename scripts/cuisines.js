@@ -42,7 +42,8 @@ const fetchCuisines = async () => {
 
      let country = await fetch(`https://flagcdn.com/en/codes.json`);
      let name = await country.json();
-     console.log(name)
+     console.log(name['ae'])
+     console.log(Object.values(name).find('United Arab Emirates'))
 
       displayCuisines()
 
@@ -54,7 +55,7 @@ const fetchCuisines = async () => {
                     }
                )
      })
-console.log(document.querySelector('.cuisine-container'))
+//console.log(document.querySelector('.cuisine-container'))
 }
 
 fetchCuisines()
