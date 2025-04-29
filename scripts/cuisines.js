@@ -27,7 +27,7 @@ const fetchCuisines = async () => {
      // console.log(shuffledCuisines(arrayToShuffle))
      // console.log(cuisineApiResponseData.meals)
 
-     //                           if(document.querySelector('.cuisine-container')){
+     //if(document.querySelector('.cuisine-container')){
      //      for(let i = 0; i <= 4; i++){
      //           //console.log(data.meals[i].strArea);
      //           //cuisinesArray.push(data.meals[i].strArea);
@@ -42,14 +42,15 @@ const fetchCuisines = async () => {
 
       displayCuisines()
 
-     document.querySelectorAll(".cuisine-box").forEach( (cuisine) => {
+     document.querySelectorAll(".cuisine-box").forEach(
+          (cuisine) => {
                     cuisine.addEventListener('click', 
                     () => {
-                         console.log(document.querySelector(".cuisine-box"))
+                         console.log(cuisine)
                     }
                )
      })
-
+console.log(document.querySelector('.cuisine-container'))
 }
 
 fetchCuisines()
