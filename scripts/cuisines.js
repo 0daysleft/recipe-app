@@ -27,28 +27,28 @@ const fetchCuisines = async () => {
      // console.log(shuffledCuisines(arrayToShuffle))
      // console.log(cuisineApiResponseData.meals)
 
-     if(document.querySelector('cuisines')){
-          for(let i = 0; i <= 4; i++){
-               //console.log(data.meals[i].strArea);
-               //cuisinesArray.push(data.meals[i].strArea);
-               document.querySelector('.cuisines').innerHTML += 
-                              `
-                                   <div class='cuisine'>
-                                        <p>${arrayToShuffle[i].strArea}</p>
-                                   <div>
-                              `
-          }
-     }
+     //                           if(document.querySelector('.cuisine-container')){
+     //      for(let i = 0; i <= 4; i++){
+     //           //console.log(data.meals[i].strArea);
+     //           //cuisinesArray.push(data.meals[i].strArea);
+     //           document.querySelector('.cuisines').innerHTML += 
+     //                          `
+     //                               <div class='cuisine'>
+     //                                    <p>${arrayToShuffle[i].strArea}</p>
+     //                               <div>
+     //                          `
+     //      }
+     // }
 
       displayCuisines()
 
-     // document.querySelectorAll(".cuisine-container").forEach( (cuisine) => {
-               //      cuisine.addEventListener('click', 
-               //      () => {
-               //           console.log(document.querySelector(".cuisine-box"))
-               //      }
-               // )
-     // })
+     document.querySelectorAll(".cuisine-box").forEach( (cuisine) => {
+                    cuisine.addEventListener('click', 
+                    () => {
+                         console.log(document.querySelector(".cuisine-box"))
+                    }
+               )
+     })
 
 }
 
