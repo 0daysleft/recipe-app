@@ -42,9 +42,21 @@ const fetchCuisines = async () => {
 
      let country = await fetch(`https://flagcdn.com/en/codes.json`);
      let name = await country.json();
-     console.log(name['ae'])
+     //console.log(name['ae'])
 
-      displayCuisines()
+     function getKeyByValue(object, value) {
+  for (let key in object) {
+    if (object[key] === value) {
+      return key;
+    }
+  }
+  return null; // Return null if the value is not found
+}
+
+let key = getKeyByValue(name, 'United Arab Emirates');
+console.log(key); // Output: 'two'
+
+     displayCuisines()
 
      document.querySelectorAll(".cuisine-box").forEach(
           (cuisine) => {
