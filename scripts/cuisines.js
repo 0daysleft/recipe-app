@@ -27,10 +27,6 @@ console.log("Match: ", foundObject);
      //The four in the loop is to not show all the cuisine just a few and the user will be taken to all other cuisines if they click any cuisine
      arrayToShuffle = cuisineApiResponseData.meals;
 
-     //console.log(arrayToShuffle)
-     // console.log(arrayToShuffle.length)
-      //console.log(arrayToShuffle)
-
      shuffledCuisines = (array) => {
           for (let i = array.length - 1; i > 0; i--) {
                let random = Math.floor(Math.random() * (i + 1)); 
@@ -50,7 +46,7 @@ console.log("Match: ", foundObject);
                     }
                )
      })
-//console.log(document.querySelector('.cuisine-container'))
+
 }
 
 fetchCuisines()
