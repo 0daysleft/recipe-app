@@ -58,22 +58,6 @@ fetchCuisines()
 function displayCuisines(){
 
      for(let i = 0; i <= arrayToShuffle.length -1; i++){
-          // async () => {
-          //      let country = await fetch(`https://flagcdn.com/en/codes.json`);
-          //      let countryData = await country.json();
-               
-          //      getKeyByValue = (object, value) => {
-          //           for (let key in object) {
-          //                if (object[key] === value) {
-          //                     return key;
-          //                }
-          //           }    
-          //           return 'Value Not Found';
-          // }
-
-          //      key = getKeyByValue(countryData, `${arrayToShuffle[i].strArea}`);
-          //      console.log(`The Key Is : ${key}`);
-          // }
 
           document.querySelector(".cuisine-container").innerHTML += 
                     `
