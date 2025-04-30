@@ -11,7 +11,18 @@ const fetchCuisines = async () => {
      cuisineApiResponseData = await cuisineApiResponse.json();
      let co = await fetch(`https://restcountries.com/v3.1/all`);
      let coh = await co.json();
-     console.log(coh[0].name)
+     console.log(coh[0].name.common);
+
+
+const foundObject = coh.find(obj => {
+    // Check if any value in the object contains the search string
+    return Object.values(obj).some(value => 
+        typeof value === 'string' && value.includes('Kenya')
+    );
+});
+
+console.log("Match: ", foundObject);
+
 
      //The four in the loop is to not show all the cuisine just a few and the user will be taken to all other cuisines if they click any cuisine
      arrayToShuffle = cuisineApiResponseData.meals;
