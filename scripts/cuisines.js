@@ -45,21 +45,21 @@ const fetchCuisines = async () => {
      //      }
      // }
 
-     let country = await fetch(`https://flagcdn.com/en/codes.json`);
-     let name = await country.json();
-     console.log(name)
+//      let country = await fetch(`https://flagcdn.com/en/codes.json`);
+//      let name = await country.json();
+//      console.log(name)
 
-     function getKeyByValue(object, value) {
-          for (let key in object) {
-               if (object[key] === value) {
-                    return key;
-               }
-          }    
-          return 'Value Not Found'; // Return null if the value is not found
-     }
+//      function getKeyByValue(object, value) {
+//           for (let key in object) {
+//                if (object[key] === value) {
+//                     return key;
+//                }
+//           }    
+//           return 'Value Not Found'; // Return null if the value is not found
+//      }
 
-let key = getKeyByValue(name, 'United Arab Emirates');
-console.log("Key One: " + key); // Output: 'two'
+// let key = getKeyByValue(name, 'United Arab Emirates');
+// console.log("Key One: " + key); // Output: 'two'
 
      displayCuisines()
 
@@ -79,22 +79,22 @@ fetchCuisines()
 function displayCuisines(){
 
      for(let i = 0; i <= arrayToShuffle.length -1; i++){
-          async () => {
-               let country = await fetch(`https://flagcdn.com/en/codes.json`);
-               let countryData = await country.json();
+          // async () => {
+          //      let country = await fetch(`https://flagcdn.com/en/codes.json`);
+          //      let countryData = await country.json();
                
-               getKeyByValue = (object, value) => {
-                    for (let key in object) {
-                         if (object[key] === value) {
-                              return key;
-                         }
-                    }    
-                    return 'Value Not Found';
-          }
+          //      getKeyByValue = (object, value) => {
+          //           for (let key in object) {
+          //                if (object[key] === value) {
+          //                     return key;
+          //                }
+          //           }    
+          //           return 'Value Not Found';
+          // }
 
-               key = getKeyByValue(countryData, `${arrayToShuffle[i].strArea}`);
-               console.log(`The Key Is : ${key}`);
-          }
+          //      key = getKeyByValue(countryData, `${arrayToShuffle[i].strArea}`);
+          //      console.log(`The Key Is : ${key}`);
+          // }
 
           document.querySelector(".cuisine-container").innerHTML += 
                     `
