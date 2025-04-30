@@ -13,7 +13,7 @@ const fetchCuisines = async () => {
 
      //console.log(arrayToShuffle)
      // console.log(arrayToShuffle.length)
-      console.log(arrayToShuffle)
+      //console.log(arrayToShuffle)
 
      shuffledCuisines = (array) => {
           for (let i = array.length - 1; i > 0; i--) {
@@ -40,21 +40,21 @@ const fetchCuisines = async () => {
      //      }
      // }
 
-     let country = await fetch(`https://flagcdn.com/en/codes.json`);
-     let name = await country.json();
-     //console.log(name['ae'])
+//      let country = await fetch(`https://flagcdn.com/en/codes.json`);
+//      let name = await country.json();
+//      //console.log(name['ae'])
 
-     function getKeyByValue(object, value) {
-          for (let key in object) {
-               if (object[key] === value) {
-                    return key;
-               }
-          }    
-          return 'Value Not Found'; // Return null if the value is not found
-     }
+//      function getKeyByValue(object, value) {
+//           for (let key in object) {
+//                if (object[key] === value) {
+//                     return key;
+//                }
+//           }    
+//           return 'Value Not Found'; // Return null if the value is not found
+//      }
 
-let key = getKeyByValue(name, 'United Arab Emirates');
-console.log(key); // Output: 'two'
+// let key = getKeyByValue(name, 'United Arab Emirates');
+// console.log(key); // Output: 'two'
 
      displayCuisines()
 
@@ -90,13 +90,13 @@ function displayCuisines(){
      }
 
           key = getKeyByValue(name, `${arrayToShuffle[i].strArea}`);
-          console.log(key);
+          console.log(`${key}`);
           }
           document.querySelector(".cuisine-container").innerHTML += 
                     `
                          <div class='cuisine-box' id='${arrayToShuffle[i].strArea}'>
                                    <p>${arrayToShuffle[i].strArea}</p>
-                                   <img src='https://flagcdn.com/256x192/${key}.png'/>
+                                   <img src="https://flagcdn.com/256x192/${key}.png" width="256" height="192" alt="${arrayToShuffle[i].strArea}">
                          </div>
                     `
      }
