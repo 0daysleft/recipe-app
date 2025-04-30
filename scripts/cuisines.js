@@ -91,12 +91,12 @@ function displayCuisines(){
                key = getKeyByValue(name, `${arrayToShuffle[i].strArea}`);
                //console.log(`${key}`);
           }
-          
+
           document.querySelector(".cuisine-container").innerHTML += 
                     `
                          <div class='cuisine-box' id='${arrayToShuffle[i].strArea}'>
-                                   <p>${arrayToShuffle[i].strArea}</p>
-                                   <img src="https://flagcdn.com/256x192/${key}.png" width="256" height="192" alt="${arrayToShuffle[i].strArea}">
+                                   <p>${arrayToShuffle[i].strArea} <strong>${key}</strong> </p> 
+                                   <img src="https://flagcdn.com/256x192/ae.png" width="256" height="192" alt="${arrayToShuffle[i].strArea}">
                          </div>
                     `
      }
