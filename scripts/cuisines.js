@@ -40,38 +40,6 @@ console.log("Match: ", foundObject);
      }
 
 
-     // console.log(shuffledCuisines(arrayToShuffle))
-     // console.log(cuisineApiResponseData.meals)
-
-     //if(document.querySelector('.cuisine-container')){
-     //      for(let i = 0; i <= 4; i++){
-     //           //console.log(data.meals[i].strArea);
-     //           //cuisinesArray.push(data.meals[i].strArea);
-     //           document.querySelector('.cuisines').innerHTML += 
-     //                          `
-     //                               <div class='cuisine'>
-     //                                    <p>${arrayToShuffle[i].strArea}</p>
-     //                               <div>
-     //                          `
-     //      }
-     // }
-
-//      let country = await fetch(`https://flagcdn.com/en/codes.json`);
-//      let name = await country.json();
-//      console.log(name)
-
-//      function getKeyByValue(object, value) {
-//           for (let key in object) {
-//                if (object[key] === value) {
-//                     return key;
-//                }
-//           }    
-//           return 'Value Not Found'; // Return null if the value is not found
-//      }
-
-// let key = getKeyByValue(name, 'United Arab Emirates');
-// console.log("Key One: " + key); // Output: 'two'
-
      displayCuisines()
 
      document.querySelectorAll(".cuisine-box").forEach(
