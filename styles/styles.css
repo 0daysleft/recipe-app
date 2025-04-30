@@ -18,6 +18,10 @@ body{
      box-sizing: border-box;
 }
 
+body::selection{
+     color: #e86600;
+}
+
 /* Navigation Section */
 
 nav{
@@ -134,10 +138,10 @@ nav ul a{
 
 /*  */
 
-.home-page .home-details-bg{
-     width: 80%;
-     height: 80vh;
-     margin: auto;
+.home-page, .home-search{
+     width: 90%;
+     height: 90%;
+     margin: 2rem auto;
      border-radius: 2rem;
      background-image: url('../images/food-horizontal-cropped.jpg');
      background-position: center;
@@ -170,26 +174,28 @@ nav ul a{
 
 /* Home search Section */
 
-.home-search .only-for-bg{
-     width: 80%;
+.home-search{
+     /* width: 80%;
      height: 80%;
      border-radius: 2rem;
-     margin: auto;
+     margin: auto; */
      /* display: flex;
      align-items: first baseline;
      justify-content: flex-end;
      background: linear-gradient(to left, #ff7a00 0%, rgba(255, 122, 0, 0) 100%); */
+     margin: 2rem auto !important;
      background-image: url('../images/meal-plate-horizontal-cropped.jpg');
-     background-position: center;
+     /* background-position: center;
      background-size: cover;
      background-repeat: no-repeat;
+     */
      display: flex;
      flex-direction: column;
      align-items: flex-end;
      justify-content: space-around;
      color: #fff;
      font-weight: bolder;
-     font-size: 2rem;
+     font-size: 2rem; 
 }
 
 .home-search .home-search-flex-div{

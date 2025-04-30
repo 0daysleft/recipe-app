@@ -72,12 +72,31 @@ console.log(key); // Output: 'two'
 fetchCuisines()
 
 function displayCuisines(){
+     let key;
+     let getKeyByValue;
      for(let i = 0; i <= arrayToShuffle.length -1; i++){
+          async () => {
+     let country = await fetch(`https://flagcdn.com/en/codes.json`);
+     let name = await country.json();
+     //console.log(name['ae'])
+
+     getKeyByValue = (object, value) => {
+          for (let key in object) {
+               if (object[key] === value) {
+                    return key;
+               }
+          }    
+          return 'Value Not Found'; // Return null if the value is not found
+     }
+
+          key = getKeyByValue(name, `${arrayToShuffle[i].strArea}`);
+          console.log(key);
+          }
           document.querySelector(".cuisine-container").innerHTML += 
                     `
                          <div class='cuisine-box' id='${arrayToShuffle[i].strArea}'>
                                    <p>${arrayToShuffle[i].strArea}</p>
-                                   <img src='https://flagcdn.com/256x192/ua.png'/>
+                                   <img src='https://flagcdn.com/256x192/${key}.png'/>
                          </div>
                     `
      }
