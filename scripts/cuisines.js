@@ -2,6 +2,8 @@
 let cuisineApiResponseData;
 let arrayToShuffle;
 let shuffledCuisines;
+let key;
+let getKeyByValue;
 let cuisineApi = `https://www.themealdb.com/api/json/v1/1/list.php?a=list`
 
 const fetchCuisines = async () => {
@@ -40,21 +42,21 @@ const fetchCuisines = async () => {
      //      }
      // }
 
-//      let country = await fetch(`https://flagcdn.com/en/codes.json`);
-//      let name = await country.json();
-//      //console.log(name['ae'])
+     let country = await fetch(`https://flagcdn.com/en/codes.json`);
+     let name = await country.json();
+     console.log(name)
 
-//      function getKeyByValue(object, value) {
-//           for (let key in object) {
-//                if (object[key] === value) {
-//                     return key;
-//                }
-//           }    
-//           return 'Value Not Found'; // Return null if the value is not found
-//      }
+     function getKeyByValue(object, value) {
+          for (let key in object) {
+               if (object[key] === value) {
+                    return key;
+               }
+          }    
+          return 'Value Not Found'; // Return null if the value is not found
+     }
 
-// let key = getKeyByValue(name, 'United Arab Emirates');
-// console.log(key); // Output: 'two'
+let key = getKeyByValue(name, 'United Arab Emirates');
+console.log("Key One: " + key); // Output: 'two'
 
      displayCuisines()
 
@@ -72,12 +74,11 @@ const fetchCuisines = async () => {
 fetchCuisines()
 
 function displayCuisines(){
-     let key;
-     let getKeyByValue;
+
      for(let i = 0; i <= arrayToShuffle.length -1; i++){
           async () => {
                let country = await fetch(`https://flagcdn.com/en/codes.json`);
-               let name = await country.json();
+               let countryData = await country.json();
                
                getKeyByValue = (object, value) => {
                     for (let key in object) {
@@ -88,8 +89,8 @@ function displayCuisines(){
                     return 'Value Not Found';
           }
 
-               key = getKeyByValue(name, `${arrayToShuffle[i].strArea}`);
-               //console.log(`${key}`);
+               key = getKeyByValue(countryData, `${arrayToShuffle[i].strArea}`);
+               console.log(`The Key Is : ${key}`);
           }
 
           document.querySelector(".cuisine-container").innerHTML += 
