@@ -58,8 +58,8 @@ function displayCuisines(){
           document.querySelector(".cuisine-container").innerHTML += 
                     `
                          <div class='cuisine-box' id='${arrayToShuffle[i].strArea}'>
-                                   <p>${arrayToShuffle[i].strArea} <strong>${key}</strong> </p> 
-                                   <img src="https://flagcdn.com/256x192/ae.png" width="256" height="192" alt="${arrayToShuffle[i].strArea}">
+                                   <p>${arrayToShuffle[i].strArea} </p> 
+                                   <img src="https://flagcdn.com/72x54/ke.png"  srcset="https://flagcdn.com/144x108/ke.png 2x,    https://flagcdn.com/216x162/ke.png 3x"  width="72" height="54" alt="${arrayToShuffle[i].strArea}">
                          </div>
                     `
      }
