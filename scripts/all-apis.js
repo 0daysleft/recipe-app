@@ -32,15 +32,11 @@
 // /images/media/meals/llcbn01574260722.jpg/small
 // /images/media/meals/llcbn01574260722.jpg/medium
 // /images/media/meals/llcbn01574260722.jpg/large
-// Small meal thumbnail
 
 // Ingredient Thumbnail Images
 // *URL's match the ingredient name with an underscore for any spaces.
 
 // www.themealdb.com/images/ingredients/lime.png
-// www.themealdb.com/images/ingredients/lime-small.png
-// www.themealdb.com/images/ingredients/lime-medium.png
-// www.themealdb.com/images/ingredients/lime-large.png
 
 let api_cuisine =  `https://www.themealdb.com/api/json/v1/1/list.php?a=list`
 let api_cuisine_meal =  `https://www.themealdb.com/api/json/v1/1/filter.php?a=kenyan`
